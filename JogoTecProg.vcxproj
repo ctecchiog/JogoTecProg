@@ -151,9 +151,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Inimigo.cpp" />
+    <ClCompile Include="Jogador.cpp" />
+    <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Personagem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Inimigo.h" />
+    <ClInclude Include="Jogador.h" />
+    <ClInclude Include="Jogo.h" />
+    <ClInclude Include="Personagem.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
