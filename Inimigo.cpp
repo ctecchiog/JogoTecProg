@@ -1,23 +1,23 @@
 #include "Inimigo.h"
 #include "SFML\Graphics.hpp"
 
-Entidades::Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador::Jogador* jogador): 
-	Personagem(pos, tam), relogio(), jogador(jogador)
+void Jogar::Entidades::Inimigo::Inimigo::inicializa()
+{
+	vel = sf::Vector2f(VEL_INIMX, VEL_INIMY);
+}
+Jogar::Entidades::Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador::Jogador* jogador):
+	Personagem(pos, tam), jogador(jogador)
 {
 	corpo.setFillColor(sf::Color::Red);
 	inicializa();
 	srand(time(NULL));
 	moveAleatorio = rand()%4;
 }
-Entidades::Inimigo::Inimigo::~Inimigo()
+Jogar::Entidades::Inimigo::Inimigo::~Inimigo()
 {
 
 }
-void Entidades::Inimigo::Inimigo::inicializa()
-{
-	vel = sf::Vector2f(VEL_INIMX, VEL_INIMY);
-}
-void Entidades::Inimigo::persegueJogador(sf::Vector2f posJogador, sf::Vector2f posInimigo)
+void Jogar::Entidades::Inimigo::persegueJogador(sf::Vector2f posJogador, sf::Vector2f posInimigo)
 {
 	if (posJogador.x - posInimigo.x > 0.0f)
 		corpo.move(vel.x, 0.0f);
@@ -36,7 +36,7 @@ void Entidades::Inimigo::persegueJogador(sf::Vector2f posJogador, sf::Vector2f p
 		relogio.restart();
 	}
 }
-void Entidades::Inimigo::movimentoAleatorio()
+void Jogar::Entidades::Inimigo::movimentoAleatorio()
 {
 	if (moveAleatorio == 0)
 		corpo.move(vel.x, 0.0f);
@@ -47,7 +47,7 @@ void Entidades::Inimigo::movimentoAleatorio()
 	else 
 		corpo.move(0.0f, -vel.y);
 }
-void Entidades::Inimigo::Inimigo::move()
+void Jogar::Entidades::Inimigo::Inimigo::atualizar()
 {
 	sf::Vector2f posJogador = jogador->getCorpo().getPosition();
 	sf::Vector2f posInimigo = corpo.getPosition();
