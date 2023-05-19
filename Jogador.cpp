@@ -1,25 +1,19 @@
 #include "Jogador.h"
 #include "SFML\Graphics.hpp"
 
-Entidades::Jogador::Jogador(const sf::RectangleShape corpo): corpo(corpo)
+Entidades::Jogador::Jogador(const sf::Vector2f pos, const sf::Vector2f tam):
+	Personagem(pos, tam)
 {
-	inicializa();
+	corpo.setFillColor(sf::Color::Green);
 }
-Entidades::Jogador::Jogador(): corpo()
-{
-	inicializa();
-}
-void Entidades::Jogador::inicializa()
-{
-	vel = sf::Vector2f(0.1f, 0.1f);
-}
+
 Entidades::Jogador::~Jogador()
 { 
 
 }
-const sf::RectangleShape Entidades::Jogador::getCorpo()
+void Entidades::Jogador::inicializa()
 {
-	return corpo;
+
 }
 void Entidades::Jogador::move()
 {

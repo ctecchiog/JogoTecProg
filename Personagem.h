@@ -3,7 +3,7 @@
 #include "SFML\Graphics.hpp"
 namespace Entidades {
 	class Personagem {
-	private:
+	protected:
 		sf::RectangleShape corpo;
 		sf::Vector2f vel;
 	public:
@@ -13,4 +13,3 @@ namespace Entidades {
 		virtual void move() = 0;
 	};
 }
-#pragma once

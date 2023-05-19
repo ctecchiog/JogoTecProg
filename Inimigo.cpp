@@ -1,40 +1,61 @@
 #include "Inimigo.h"
 #include "SFML\Graphics.hpp"
 
-Entidades::Personagem::Inimigo::Inimigo(const sf::RectangleShape corpo) : corpo(corpo)
+Entidades::Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador::Jogador* jogador): 
+	Personagem(pos, tam), relogio(), jogador(jogador)
 {
+	corpo.setFillColor(sf::Color::Red);
 	inicializa();
+	srand(time(NULL));
+	moveAleatorio = rand()%4;
 }
-Entidades::Personagem::Inimigo::Inimigo() : corpo()
-{
-	inicializa();
-}
-void Entidades::Personagem::Inimigo::inicializa()
-{
-	vel = sf::Vector2f(0.1f, 0.1f);
-}
-Entidades::Personagem::Inimigo::~Inimigo()
+Entidades::Inimigo::Inimigo::~Inimigo()
 {
 
 }
-void Entidades::Personagem::Inimigo::move()
+void Entidades::Inimigo::Inimigo::inicializa()
 {
-	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
+	vel = sf::Vector2f(VEL_INIMX, VEL_INIMY);
+}
+void Entidades::Inimigo::persegueJogador(sf::Vector2f posJogador, sf::Vector2f posInimigo)
+{
+	if (posJogador.x - posInimigo.x > 0.0f)
+		corpo.move(vel.x, 0.0f);
+	else
+		corpo.move(-vel.x, 0.0f);
+
+	if (posJogador.y - posInimigo.y > 0.0f)
+		corpo.move(0.0f, vel.y);
+	else
+		corpo.move(0.0f, -vel.y);
+
+	float dt = relogio.getElapsedTime().asSeconds();
+	if (dt >= 1.0f)
 	{
-		corpo.move(-vel.x, 0.0);
+		moveAleatorio = rand() % 4;
+		relogio.restart();
 	}
-	else if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::S)))
-	{
-		corpo.move(vel.x, 0.0);
-	}
-	else if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::W)))
-	{
-		corpo.move(0.0, -vel.y);
-	}
-	else if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Z)))
-	{
-		corpo.move(0.0, vel.y);
-	}
+}
+void Entidades::Inimigo::movimentoAleatorio()
+{
+	if (moveAleatorio == 0)
+		corpo.move(vel.x, 0.0f);
+	else if (moveAleatorio == 1)
+		corpo.move(-vel.x, 0.0f);
+	else if (moveAleatorio == 2)
+		corpo.move(0.0f, vel.y);
+	else 
+		corpo.move(0.0f, -vel.y);
+}
+void Entidades::Inimigo::Inimigo::move()
+{
+	sf::Vector2f posJogador = jogador->getCorpo().getPosition();
+	sf::Vector2f posInimigo = corpo.getPosition();
+
+	if (fabs(posJogador.x - posInimigo.x) <= RAIO_PERSEGUIRX && fabs(posJogador.y - posInimigo.y) <= RAIO_PERSEGUIRY)
+		persegueJogador(posJogador, posInimigo);
+	else
+		movimentoAleatorio();
 }
 
 

@@ -3,16 +3,25 @@
 #include "SFML\Graphics.hpp"
 #include "Personagem.h"
 #include "Jogador.h"
+
+#define VEL_INIMX 0.025f
+#define VEL_INIMY 0.025f
+
+#define RAIO_PERSEGUIRX 200.0f
+#define RAIO_PERSEGUIRY 200.0f
+
 namespace Entidades {
-	class : public Personagem {
+	class Inimigo: public Personagem {
 	private:
-		Jogador* jogador;
-		sf::RectangleShape corpo;
-		sf::Vector2f vel;
+		Jogador::Jogador* jogador;
+		sf::Clock relogio;
+		short moveAleatorio;
+		void inicializa();
 	public:
-		Jogador(const sf::RectangleShape corpo);
-		Jogador();
-		~Jogador();
+		Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador::Jogador* jogador);
+		~Inimigo();
+		void persegueJogador(sf::Vector2f posJogador, sf::Vector2f posInimigo);
+		void movimentoAleatorio();
 		void move();
 	};
-};
+}
