@@ -2,8 +2,8 @@
 
 Jogar::Gerenciadores::Gerenciador_Grafico* Jogar::Gerenciadores::Gerenciador_Grafico::pGrafico = NULL;
 
-Jogar::Gerenciadores::Gerenciador_Grafico::Gerenciador_Grafico()
-	window(new sf::RenderWindow(sf::VideoMode(800.0f, 600.0f), "Jogo"))
+Jogar::Gerenciadores::Gerenciador_Grafico::Gerenciador_Grafico():
+	window(new sf::RenderWindow(sf::VideoMode(800, 600), "Jogo"))
 {
 	if (window == NULL)
 	{

@@ -23,7 +23,7 @@ void Jogar::Jogo::executar()
 	}
 }
 
-void Jogar::Jogo::instaciaEntidades()
+void Jogar::Jogo::instanciaEntidades()
 {
 	Entidades::Personagem::Jogador::Jogador* jogador = new Entidades::Personagem::Jogador::Jogador(sf::Vector2f(100.0f, 200.0f), sf::Vector2f(50.0f, 50.0f));
 	Entidades::Personagem::Inimigo::Inimigo* inimigo1 = new Entidades::Personagem::Inimigo::Inimigo(sf::Vector2f(100.0f, 100.0f), sf::Vector2f(30.0f, 30.0f), jogador);

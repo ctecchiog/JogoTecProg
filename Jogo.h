@@ -19,6 +19,6 @@ namespace Jogar
 		Jogo();
 		~Jogo();
 		void executar();
-		void instaciaEntidades();
+		void instanciaEntidades();
 	};
 }

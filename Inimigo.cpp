@@ -1,11 +1,12 @@
 #include "Inimigo.h"
 #include "SFML\Graphics.hpp"
+#include "SFML-2.5.1/include/SFML/System/Vector2.hpp"
 
 void Jogar::Entidades::Inimigo::Inimigo::inicializa()
 {
 	vel = sf::Vector2f(VEL_INIMX, VEL_INIMY);
 }
-Jogar::Entidades::Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador::Jogador* jogador):
+Jogar::Entidades::Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador* jogador):
 	Personagem(pos, tam), jogador(jogador)
 {
 	corpo.setFillColor(sf::Color::Red);
