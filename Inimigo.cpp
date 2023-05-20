@@ -6,8 +6,8 @@ void Jogar::Entidades::Inimigo::Inimigo::inicializa()
 {
 	vel = sf::Vector2f(VEL_INIMX, VEL_INIMY);
 }
-Jogar::Entidades::Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador* jogador):
-	Personagem(pos, tam), jogador(jogador)
+Jogar::Entidades::Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, const float vel, Jogador* jogador):
+	jogador(jogador)
 {
 	corpo.setFillColor(sf::Color::Red);
 	inicializa();
@@ -57,6 +57,10 @@ void Jogar::Entidades::Inimigo::Inimigo::atualizar()
 		persegueJogador(posJogador, posInimigo);
 	else
 		movimentoAleatorio();
+}
+
+void Jogar::Entidades::Inimigo::colisao(Entidade* outraEntidade, sf::Vector2f ds)
+{
 }
 
 

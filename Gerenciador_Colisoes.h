@@ -4,6 +4,7 @@
 #include "Inimigo.h"
 #include "Gerenciador_Grafico.h"
 #include "Gerenciador_Evento.h"
+#include"ListaEntidade.h"
 #include "SFML/Graphics.hpp"
 
 namespace Jogar {
@@ -15,7 +16,7 @@ namespace Jogar {
 		public:
 			Gerenciador_Colisoes(Lista::ListaEntidade* listaPersonagem, Lista::ListaEntidade* listaObstaculo);
 			~Gerenciador_Colisoes();
-			const sf::Vector2f calculaColisao(Entidade::Entidade* ent1, Entidade::Entidade* ent2);
+			const sf::Vector2f calculaColisao(Entidades::Entidade* ent1, Entidades::Entidade* ent2);
 			void executar();
 		};
 	}

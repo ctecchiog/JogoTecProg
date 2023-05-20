@@ -11,14 +11,14 @@ Jogar::Gerenciadores::Gerenciador_Evento::~Gerenciador_Evento()
 {
 }
 
-Gerenciador_Evento* Jogar::Gerenciadores::Gerenciador_Evento::getGerEvento()
+Jogar::Gerenciadores::Gerenciador_Evento* Jogar::Gerenciadores::Gerenciador_Evento::getGerEvento()
 {
     if (pEvento == NULL)
         pEvento = new Gerenciador_Evento();
     return pEvento;
 }
 
-void Jogar::Gerenciadores::Gerenciador_Evento::setJogador(Entidades::Personagem::Jogador::Jogador* pJogador)
+void Jogar::Gerenciadores::Gerenciador_Evento::setJogador(Entidades::Jogador* pJogador)
 {
     this->pJogador = pJogador;
 }
@@ -30,13 +30,13 @@ void Jogar::Gerenciadores::Gerenciador_Evento::verificaTeclaPressionada(sf::Keyb
     else if (tecla == sf::Keyboard::S|| tecla == sf::Keyboard::Right)
         pJogador->andar(false);
     else if (tecla == sf::Keyboard::Escape)
-        pGrafico->fecharJanela();
+        pGrafico->fechaJanela();
 }
 
 void Jogar::Gerenciadores::Gerenciador_Evento::verificaTeclaSolta(sf::Keyboard::Key tecla)
 {
     if (tecla == sf::Keyboard::A || tecla == sf::Keyboard::Left || tecla == sf::Keyboard::S || tecla == sf::Keyboard::Right)
-        pJogador->andar();
+        pJogador->parar();
 }
 
 void Jogar::Gerenciadores::Gerenciador_Evento::executar()
@@ -49,7 +49,7 @@ void Jogar::Gerenciadores::Gerenciador_Evento::executar()
         else if (evento.type == sf::Event::KeyReleased)
             verificaTeclaSolta(evento.key.code);
         else if (evento.type == sf::Event::Closed) 
-            pGrafico->fecharJanela();
+            pGrafico->fechaJanela();
     }
 }
 

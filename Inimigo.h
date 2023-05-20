@@ -21,11 +21,12 @@ namespace Jogar
 			short moveAleatorio;
 			void inicializa();
 		public:
-			Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador* jogador);
+			Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, const float vel, Jogador* jogador);
 			~Inimigo();
 			void persegueJogador(sf::Vector2f posJogador, sf::Vector2f posInimigo);
 			void movimentoAleatorio();
 			void atualizar();
+			void colisao(Entidade* outraEntidade, sf::Vector2f ds);
 		};
 	}
 }

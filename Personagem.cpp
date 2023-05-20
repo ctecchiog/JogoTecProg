@@ -5,6 +5,9 @@ namespace Jogar
 {
 	namespace Entidades 
 	{
+		Personagem::Personagem()
+		{
+		}
 		Personagem::Personagem(const sf::Vector2f pos, const sf::Vector2f tam, const float vel) :
 			vel(sf::Vector2f(0.1f, 0.1f))
 		{

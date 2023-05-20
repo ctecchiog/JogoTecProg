@@ -15,6 +15,7 @@ namespace Jogar
 			sf::Clock relogio;
 			float dt;
 		public:
+			Personagem();
 			Personagem(const sf::Vector2f pos, const sf::Vector2f tam, const float vel);
 			~Personagem();
 			void andar(const bool paraEsquerda);

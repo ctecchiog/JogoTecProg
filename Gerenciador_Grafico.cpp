@@ -25,7 +25,7 @@ Jogar::Gerenciadores::Gerenciador_Grafico* Jogar::Gerenciadores::Gerenciador_Gra
 {
 	if (pGrafico == NULL) 
 	{
-		return new Gerenciador_Grafico();
+		pGrafico = new Gerenciador_Grafico();
 	}
 	return pGrafico;
 }

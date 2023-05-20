@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include "SFML\Graphics.hpp"
 #include "Personagem.h"
+
 namespace Jogar 
 {
 	namespace Entidades 
@@ -11,11 +12,11 @@ namespace Jogar
 		private:
 			void inicializa();
 		public:
-			Jogador(const sf::Vector2f pos, const sf::Vector2f tam);
-			Jogador();
+			Jogador(const sf::Vector2f pos, const sf::Vector2f tam, const float vel);
 			~Jogador();
 			void move();
 			void atualizar();
+			void colisao(Entidade* outraEntidade, sf::Vector2f ds);
 		};
 	}
 }
