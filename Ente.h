@@ -15,6 +15,6 @@ namespace Jogar
 		Ente();
 		~Ente();
 		void desenhar();
-		//virtual void executar = 0;
+		virtual void executar() = 0;
 	};
 }

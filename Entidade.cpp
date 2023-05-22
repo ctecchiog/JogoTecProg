@@ -29,6 +29,11 @@ const sf::Vector2f Jogar::Entidades::Entidade::getTam()
 	return corpo.getSize();
 }
 
+const int Jogar::Entidades::Entidade::getId()
+{
+	return this->id;
+}
+
 void Jogar::Entidades::Entidade::atualizar()
 {
 }

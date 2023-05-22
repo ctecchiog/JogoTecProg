@@ -16,7 +16,7 @@ namespace Jogar
 	{
 		class Inimigo : public Personagem 
 		{
-		private:
+		protected:
 			Jogador* jogador;
 			short moveAleatorio;
 			void inicializa();
