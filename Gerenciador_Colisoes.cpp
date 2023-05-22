@@ -14,7 +14,7 @@ Jogar::Gerenciadores::Gerenciador_Colisoes::~Gerenciador_Colisoes()
 		delete (listaObstaculo);
 }
 
-const sf::Vector2f Jogar::Gerenciadores::Gerenciador_Colisoes::calculaColisao(Entidades::Entidade* ent1, Entidades::Entidade* ent2)
+const sf::Vector2f Jogar::Gerenciadores::Gerenciador_Colisoes::calculaColisao(Entidade* ent1, Entidade* ent2)
 {
 	sf::Vector2f pos1 = ent1->getPos();
 	sf::Vector2f pos2 = ent2->getPos();
@@ -34,28 +34,12 @@ const sf::Vector2f Jogar::Gerenciadores::Gerenciador_Colisoes::calculaColisao(En
 void Jogar::Gerenciadores::Gerenciador_Colisoes::executar()
 {
     for (int i = 0; i < listaPersonagem->getTam() - 1; i++) {
-        Entidades::Entidade* ent1 = listaPersonagem->operator[](i);
+        Entidade* ent1 = listaPersonagem->operator[](i);
         for (int j = i + 1; j < listaPersonagem->getTam(); j++) {
-            Entidades::Entidade* ent2 = listaPersonagem->operator[](j);
+            Entidade* ent2 = listaPersonagem->operator[](j);
             sf::Vector2f ds = calculaColisao(ent1, ent2);
             if (ds.x < 0.0f && ds.y < 0.0f) {
                 ent1->colisao(ent2);
-            }
-        }
-    }
-
-    for (int i = 0; i < listaPersonagem->getTam(); i++) {
-        Entidades::Entidade* ent1 = listaPersonagem->operator[](i);
-        for (int j = 0; j < listaObstaculo->getTam(); j++) {
-            Entidades::Entidade* ent2 = listaObstaculo->operator[](j);
-            sf::Vector2f ds = calculaColisao(ent1, ent2);
-            if (ds.x < 0.0f && ds.y < 0.0f) {
-                if (ent2->getID() == IDs::IDs::plataforma || ent2->getID() == IDs::IDs::caixa) {
-                    ent2->colisao(ent1, ds);
-                }
-                else {
-                    // outro obstáculo 
-                }
             }
         }
     }

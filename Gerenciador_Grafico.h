@@ -4,25 +4,22 @@
 #include "Inimigo.h"
 #include "SFML/Graphics.hpp"
 
-namespace Jogar 
+namespace Jogar
 {
-	namespace Gerenciadores 
+	namespace Gerenciadores
 	{
 		class Gerenciador_Grafico
 		{
 		private:
 			sf::RenderWindow* window;
-			static Gerenciador_Grafico* pGrafico;
-			Gerenciador_Grafico(); ///singleton
 		public:
+			Gerenciador_Grafico();
 			~Gerenciador_Grafico();
-			static Gerenciador_Grafico* getGerGrafico();
 			sf::RenderWindow* getWindow();
-			void limpa_janela();
+			void limpaJanela();
 			void desenhaElemento(sf::RectangleShape corpo);
 			void mostraElementos();
 			void fechaJanela();
-			void verificaJanelaAberta();
 		};
 	}
 }

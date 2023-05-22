@@ -1,30 +1,38 @@
 #include "Jogador.h"
 #include "SFML\Graphics.hpp"
-
-Jogar::Entidades::Jogador::Jogador(const sf::Vector2f pos, const sf::Vector2f tam, const float vel)
+ 
+namespace Jogar
 {
-	inicializa();
+	Jogador::Jogador(const sf::Vector2f pos, const sf::Vector2f tam)
+	{
+		inicializa();
+		this->id = 1;
+	}
+
+	Jogador::~Jogador()
+	{
+
+	}
+
+	void Jogador::inicializa()
+	{
+		this->corpo.setFillColor(sf::Color::Green);
+	}
+
+	void Jogador::atualizar()
+	{
+		if (podeAndar)
+			atualizarPosicao();
+		relogio.restart();
+	}
+
+	void Jogador::colisao(Entidade* outraEntidade)
+	{
+		if (outraEntidade->getID() == 2)
+			this->operator-();
+	}
+	void Jogador::executar()
+	{
+	}
 }
-
-Jogar::Entidades::Jogador::~Jogador()
-{ 
-
-}
-
-void Jogar::Entidades::Jogador::inicializa()
-{
-	this->corpo.setFillColor(sf::Color::Green);
-}
-
-void Jogar::Entidades::Jogador::atualizar()
-{
-	if (podeAndar)
-		atualizarPosicao();
-	relogio.restart();
-}
-
-void Jogar::Entidades::Jogador::colisao(Entidade* outraEntidade, sf::Vector2f ds)
-{
-}
-
 

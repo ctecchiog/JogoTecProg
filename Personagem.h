@@ -4,8 +4,6 @@
 #include "SFML\Graphics.hpp"
 namespace Jogar
 {
-	namespace Entidades 
-	{
 		class Personagem: public Entidade
 		{
 		protected:
@@ -14,15 +12,18 @@ namespace Jogar
 			bool paraEsquerda;
 			sf::Clock relogio;
 			float dt;
+			int num_vidas;
 		public:
 			Personagem();
-			Personagem(const sf::Vector2f pos, const sf::Vector2f tam, const float vel);
+			Personagem(const sf::Vector2f pos, const sf::Vector2f tam);
 			~Personagem();
 			void andar(const bool paraEsquerda);
 			void parar();
 			virtual void atualizar() = 0;
+			virtual void colisao(Entidade* outraEntidade);
+			virtual void executar() = 0;
 			void atualizarPosicao();
-			void move();
+			int getNumVidas();
+			int operator-();
 		};
-	}
 }

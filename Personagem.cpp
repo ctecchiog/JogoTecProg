@@ -3,12 +3,10 @@
 
 namespace Jogar
 {
-	namespace Entidades 
-	{
-		Personagem::Personagem()
+		Personagem::Personagem(): dt(), num_vidas(10), podeAndar(true)
 		{
 		}
-		Personagem::Personagem(const sf::Vector2f pos, const sf::Vector2f tam, const float vel) :
+		Personagem::Personagem(const sf::Vector2f pos, const sf::Vector2f tam):
 			vel(sf::Vector2f(0.1f, 0.1f))
 		{
 		}
@@ -28,6 +26,12 @@ namespace Jogar
 		void Personagem::atualizar()
 		{
 		}
+		void Personagem::colisao(Entidade* outraEntidade)
+		{
+		}
+		void Personagem::executar()
+		{
+		}
 		void Personagem::atualizarPosicao()
 		{
 			dt = relogio.getElapsedTime().asSeconds();
@@ -36,9 +40,13 @@ namespace Jogar
 				ds *= -1;
 			corpo.move(ds, 0.0f);
 		}
-		void Personagem::move()
-		{
 
+		int Personagem::getNumVidas()
+		{
+			return num_vidas;
 		}
-	}
+		int Personagem::operator-()
+		{
+			return num_vidas--;
+		}
 }

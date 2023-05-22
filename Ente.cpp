@@ -1,17 +1,23 @@
 #include "Ente.h"
 
-Jogar::Ente::Ente()
-{
-}
 
-Jogar::Ente::~Ente()
-{
-}
+	Ente::Ente() : id()
+	{
+	}
 
-void Jogar::Ente::desenhar()
-{
-}
+	Ente::~Ente()
+	{
+	}
 
-void Jogar::Ente::executar()
-{
-}
+	void Ente::desenhar()
+	{
+	}
+
+	int Ente::getID()
+	{
+		return id;
+	}
+
+	void Ente::executar()
+	{
+	}

@@ -10,14 +10,14 @@ namespace Jogar {
 		class Gerenciador_Evento {
 		private:
 			Gerenciador_Grafico* pGrafico;
-			Entidades::Jogador* pJogador;
+			Jogador* pJogador;
 			//singleton
 			static Gerenciador_Evento* pEvento;
 			Gerenciador_Evento();
 		public:
 			~Gerenciador_Evento();
 			static Gerenciador_Evento* getGerEvento();
-			void setJogador(Entidades::Jogador* pJogador);
+			void setJogador(Jogador* pJogador);
 			void verificaTeclaPressionada(sf::Keyboard::Key tecla);
 			void verificaTeclaSolta(sf::Keyboard::Key tecla);
 			void executar();

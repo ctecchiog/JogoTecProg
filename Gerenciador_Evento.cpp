@@ -18,7 +18,7 @@ Jogar::Gerenciadores::Gerenciador_Evento* Jogar::Gerenciadores::Gerenciador_Even
     return pEvento;
 }
 
-void Jogar::Gerenciadores::Gerenciador_Evento::setJogador(Entidades::Jogador* pJogador)
+void Jogar::Gerenciadores::Gerenciador_Evento::setJogador(Jogador* pJogador)
 {
     this->pJogador = pJogador;
 }

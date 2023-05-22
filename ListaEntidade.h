@@ -11,15 +11,15 @@ namespace Jogar
         class ListaEntidade 
         {
         private:
-            Lista<Entidades::Entidade> objListaEntidade;
+            Lista<Entidade> objListaEntidade;
         public:
             ListaEntidade();
             ~ListaEntidade();
-            void addEntidade(Entidades::Entidade* entidade);
-            void removerEntidade(Entidades::Entidade* entidade);
+            void addEntidade(Entidade* entidade);
+            void removerEntidade(Entidade* entidade);
             void removerEntidade(int pos);
             int getTam();
-            Entidades::Entidade* operator[](int pos);
+            Entidade* operator[](int pos);
             void limparLista();
             void executar();
             void desenharEntidades();
