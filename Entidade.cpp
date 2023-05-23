@@ -37,7 +37,7 @@ namespace Jogar {
 
 	void Entidade::desenhar()
 	{
-		pGrafico->desenhaElemento(getCorpo());
+		pGrafico->desenhaElemento(corpo);
 	}
 
 	void Entidade::atualizar()

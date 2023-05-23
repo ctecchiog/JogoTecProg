@@ -38,6 +38,7 @@ namespace Jogar
                 aux->desenhar();
                 aux->atualizar();
             }
+
         }
         void ListaEntidade::desenharEntidades(){
             //apenas desenha as Entidades
