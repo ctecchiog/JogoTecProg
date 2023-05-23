@@ -1,5 +1,7 @@
 #include "Ente.h"
+#include "Entidade.h"
 
+	//Jogar::Gerenciadores::Gerenciador_Grafico* Ente::pGrafico = Jogar::Gerenciadores::Gerenciador_Grafico::getGerenciadorGrafico();
 	Ente::Ente() : id()
 	{
 	}
@@ -10,6 +12,7 @@
 
 	void Ente::desenhar()
 	{
+		//pGrafico->desenhaElemento(Jogar::Entidade::getCorpo());
 	}
 
 	int Ente::getID()

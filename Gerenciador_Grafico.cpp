@@ -40,7 +40,8 @@ namespace Jogar
 
 		void Gerenciador_Grafico::limpaJanela()
 		{
-			window->clear();
+			if (window)
+				window->clear();
 		}
 
 		void Gerenciador_Grafico::desenhaElemento(sf::RectangleShape corpo)

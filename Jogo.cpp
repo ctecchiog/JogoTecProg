@@ -3,8 +3,8 @@
 
 namespace Jogar 
 {
-	Gerenciadores::Gerenciador_Grafico* Jogo::pGrafico = pGrafico->getGerenciadorGrafico();
-	Jogo::Jogo() : pEvento(pEvento->getGerEvento())
+	Jogo::Jogo() 
+		//: pEvento(pEvento->getGerEvento()), pGrafico(pGrafico->getGerenciadorGrafico())
 	{
 		instanciaEntidades();
 		executar();
@@ -17,14 +17,13 @@ namespace Jogar
 
 	void Jogo::executar()
 	{
-		while (pGrafico->getWindow()->isOpen())
+		/*while (pGrafico->getWindow()->isOpen())
 		{
 			pEvento->executar();
 			pGrafico->limpaJanela();
-			pGrafico->getWindow();
 			listaEntidade.executar();
 			pGrafico->mostraElementos();
-		}
+		}*/
 	}
 
 	void Jogo::instanciaEntidades()
@@ -41,6 +40,7 @@ namespace Jogar
 		listaEntidade.addEntidade(p2);
 		listaEntidade.addEntidade(p3);
 
-		pEvento->setJogador(jogador);
+		/*
+		pEvento->setJogador(jogador);*/
 	}
 }

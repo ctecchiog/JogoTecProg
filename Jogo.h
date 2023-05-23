@@ -13,8 +13,8 @@ namespace Jogar
 	class Jogo
 	{
 	private:
-		Gerenciadores::Gerenciador_Evento* pEvento;
-		static Gerenciadores::Gerenciador_Grafico* pGrafico;
+/*		Gerenciadores::Gerenciador_Evento* pEvento;
+		Gerenciadores::Gerenciador_Grafico* pGrafico; */
 		Gerenciadores::Gerenciador_Colisoes* pColisoes;
 		Lista::ListaEntidade listaEntidade;
 	public:
