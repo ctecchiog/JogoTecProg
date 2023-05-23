@@ -9,11 +9,14 @@ namespace Jogar
 		{
 		protected:
 			sf::RectangleShape corpo;
+			sf::Vector2f pos;
+			sf::Vector2f tam;
 		public:
 			Entidade();
 			Entidade(const sf::Vector2f pos, const sf::Vector2f tam);
 			~Entidade();
 			const sf::RectangleShape getCorpo();
+			void setPos(sf::Vector2f pos);
 			sf::Vector2f getPos();
 			const sf::Vector2f getTam();
 			void desenhar();

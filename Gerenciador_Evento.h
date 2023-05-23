@@ -9,7 +9,7 @@ namespace Jogar {
 	namespace Gerenciadores {
 		class Gerenciador_Evento {
 		private:
-			Gerenciador_Grafico* pGrafico;
+			static Gerenciador_Grafico* pGrafico;
 			Jogador* pJogador;
 			//singleton
 			static Gerenciador_Evento* pEvento;

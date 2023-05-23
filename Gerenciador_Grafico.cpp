@@ -37,6 +37,11 @@ namespace Jogar
 		{
 			if (window)
 				return window;
+			else
+			{
+				window = new sf::RenderWindow(sf::VideoMode(800, 600), "Jogo");
+				return window;
+			}
 		}
 
 		void Gerenciador_Grafico::limpaJanela()

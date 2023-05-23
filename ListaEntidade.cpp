@@ -35,6 +35,7 @@ namespace Jogar
             Entidade* aux = nullptr;
             for(int i = 0; i < tam; i++){
                 aux = objListaEntidade.operator[](i);
+                aux->desenhar();
                 aux->atualizar();
             }
         }
