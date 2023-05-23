@@ -16,6 +16,7 @@ namespace Jogar
 			const sf::RectangleShape getCorpo();
 			sf::Vector2f getPos();
 			const sf::Vector2f getTam();
+			void desenhar();
 			virtual void atualizar() = 0;
 			virtual void colisao(Entidade* outraEntidade);
 			virtual void executar() = 0;

@@ -29,6 +29,11 @@ namespace Jogar {
 		return corpo.getSize();
 	}
 
+	void Entidade::desenhar()
+	{
+		pGrafico->desenhaElemento(getCorpo());
+	}
+
 	void Entidade::atualizar()
 	{
 	}

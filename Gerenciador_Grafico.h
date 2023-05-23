@@ -1,7 +1,5 @@
 #pragma once
 #include "stdafx.h"
-#include "Jogador.h"
-#include "Inimigo.h"
 #include "SFML/Graphics.hpp"
 
 namespace Jogar
