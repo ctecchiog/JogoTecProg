@@ -11,10 +11,9 @@ namespace Jogar {
 	namespace Gerenciadores {
 		class Gerenciador_Colisoes {
 		private:
-			Lista::ListaEntidade* listaPersonagem;
-			Lista::ListaEntidade* listaObstaculo;
+			Lista::ListaEntidade* listaEntidade;
 		public:
-			Gerenciador_Colisoes(Lista::ListaEntidade* listaPersonagem, Lista::ListaEntidade* listaObstaculo);
+			Gerenciador_Colisoes(Lista::ListaEntidade* listaEntidade);
 			~Gerenciador_Colisoes();
 			const sf::Vector2f calculaColisao(Entidade* ent1, Entidade* ent2);
 			void executar();

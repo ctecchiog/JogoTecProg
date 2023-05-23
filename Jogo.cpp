@@ -4,7 +4,7 @@
 namespace Jogar 
 {
 	Jogo::Jogo() 
-		//: pEvento(pEvento->getGerEvento()), pGrafico(pGrafico->getGerenciadorGrafico())
+		: pEvento(pEvento->getGerEvento()), pGrafico(pGrafico->getGerenciadorGrafico()), pColisoes(new Gerenciadores::Gerenciador_Colisoes(&listaEntidade))
 	{
 		instanciaEntidades();
 		executar();
@@ -17,13 +17,13 @@ namespace Jogar
 
 	void Jogo::executar()
 	{
-		/*while (pGrafico->getWindow()->isOpen())
+		while (pGrafico->getWindow()->isOpen())
 		{
 			pEvento->executar();
 			pGrafico->limpaJanela();
 			listaEntidade.executar();
 			pGrafico->mostraElementos();
-		}*/
+		}
 	}
 
 	void Jogo::instanciaEntidades()
@@ -40,7 +40,6 @@ namespace Jogar
 		listaEntidade.addEntidade(p2);
 		listaEntidade.addEntidade(p3);
 
-		/*
-		pEvento->setJogador(jogador);*/
+		pEvento->setJogador(jogador);
 	}
 }

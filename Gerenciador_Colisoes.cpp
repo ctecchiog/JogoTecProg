@@ -1,17 +1,15 @@
 #include "Gerenciador_Colisoes.h"
 
-Jogar::Gerenciadores::Gerenciador_Colisoes::Gerenciador_Colisoes(Lista::ListaEntidade* listaPersonagem, Lista::ListaEntidade* listaObstaculo):
-	listaPersonagem(listaPersonagem), listaObstaculo(listaObstaculo)
+Jogar::Gerenciadores::Gerenciador_Colisoes::Gerenciador_Colisoes(Lista::ListaEntidade* listaEntidade):
+	listaEntidade(listaEntidade)
 {
 
 }
 
 Jogar::Gerenciadores::Gerenciador_Colisoes::~Gerenciador_Colisoes()
 {
-	if (listaPersonagem)
-		delete (listaPersonagem);
-	if (listaObstaculo)
-		delete (listaObstaculo);
+	if (listaEntidade)
+		delete (listaEntidade);
 }
 
 const sf::Vector2f Jogar::Gerenciadores::Gerenciador_Colisoes::calculaColisao(Entidade* ent1, Entidade* ent2)
@@ -33,10 +31,10 @@ const sf::Vector2f Jogar::Gerenciadores::Gerenciador_Colisoes::calculaColisao(En
 
 void Jogar::Gerenciadores::Gerenciador_Colisoes::executar()
 {
-    for (int i = 0; i < listaPersonagem->getTam() - 1; i++) {
-        Entidade* ent1 = listaPersonagem->operator[](i);
-        for (int j = i + 1; j < listaPersonagem->getTam(); j++) {
-            Entidade* ent2 = listaPersonagem->operator[](j);
+    for (int i = 0; i < listaEntidade->getTam() - 1; i++) {
+        Entidade* ent1 = listaEntidade->operator[](i);
+        for (int j = i + 1; j < listaEntidade->getTam(); j++) {
+            Entidade* ent2 = listaEntidade->operator[](j);
             sf::Vector2f ds = calculaColisao(ent1, ent2);
             if (ds.x < 0.0f && ds.y < 0.0f) {
                 ent1->colisao(ent2);

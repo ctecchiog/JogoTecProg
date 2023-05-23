@@ -35,7 +35,8 @@ namespace Jogar
 
 		sf::RenderWindow* Gerenciador_Grafico::getWindow()
 		{
-			return window;
+			if (window)
+				return window;
 		}
 
 		void Gerenciador_Grafico::limpaJanela()
@@ -46,17 +47,20 @@ namespace Jogar
 
 		void Gerenciador_Grafico::desenhaElemento(sf::RectangleShape corpo)
 		{
+			if (window)
 			window->draw(corpo);
 		}
 
 		void Gerenciador_Grafico::mostraElementos()
 		{
-			window->display();
+			if (window)
+				window->display();
 		}
 
 		void Gerenciador_Grafico::fechaJanela()
 		{
-			window->close();
+			if (window)
+				window->close();
 		}
 	}
 }

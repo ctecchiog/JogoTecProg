@@ -1,9 +1,9 @@
 #include "Gerenciador_Evento.h"
 
-Jogar::Gerenciadores::Gerenciador_Evento* Jogar::Gerenciadores::Gerenciador_Evento::pEvento = NULL;
+Jogar::Gerenciadores::Gerenciador_Evento* Jogar::Gerenciadores::Gerenciador_Evento::pEvento = nullptr;
 
 Jogar::Gerenciadores::Gerenciador_Evento::Gerenciador_Evento():
-    pJogador(NULL), pGrafico(NULL)
+    pJogador(nullptr), pGrafico(pGrafico->getGerenciadorGrafico())
 {
 }
 
@@ -13,7 +13,7 @@ Jogar::Gerenciadores::Gerenciador_Evento::~Gerenciador_Evento()
 
 Jogar::Gerenciadores::Gerenciador_Evento* Jogar::Gerenciadores::Gerenciador_Evento::getGerEvento()
 {
-    if (pEvento == NULL)
+    if (pEvento == nullptr)
         pEvento = new Gerenciador_Evento();
     return pEvento;
 }
