@@ -5,7 +5,6 @@
 
 namespace Jogar
 {
-	
 		class Entidade: public Ente
 		{
 		protected:

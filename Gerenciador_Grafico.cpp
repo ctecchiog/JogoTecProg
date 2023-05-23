@@ -1,47 +1,61 @@
 #include "Gerenciador_Grafico.h"
 
-Jogar::Gerenciadores::Gerenciador_Grafico::Gerenciador_Grafico():
-	window(new sf::RenderWindow(sf::VideoMode(800, 600), "Jogo"))
+namespace Jogar 
 {
-	if (window == nullptr)
+	namespace Gerenciadores 
 	{
-		std::cout << "ERRO! NÃO FOI POSSÍVEL CRIAR UMA JANELA" << std::endl;
-		exit(1);
+		Gerenciador_Grafico* Gerenciador_Grafico::pGrafico = nullptr;
+
+		Gerenciador_Grafico::Gerenciador_Grafico():
+		window(new sf::RenderWindow(sf::VideoMode(800, 600), "Jogo"))
+		{
+			if (window == nullptr)
+			{
+				cout << "Erro na criação de janela" << endl;
+				exit(1);
+			}
+		}
+
+		Gerenciador_Grafico::~Gerenciador_Grafico()
+		{
+			if (window)
+			{
+				delete (window);
+				window = nullptr;
+			}
+		}
+		Gerenciador_Grafico* Gerenciador_Grafico::getGerenciadorGrafico() 
+		{
+			if (pGrafico == nullptr) 
+			{
+				pGrafico = new Gerenciador_Grafico();
+			}
+			return pGrafico;
+		}
+
+		sf::RenderWindow* Gerenciador_Grafico::getWindow()
+		{
+			return window;
+		}
+
+		void Gerenciador_Grafico::limpaJanela()
+		{
+			window->clear();
+		}
+
+		void Gerenciador_Grafico::desenhaElemento(sf::RectangleShape corpo)
+		{
+			window->draw(corpo);
+		}
+
+		void Gerenciador_Grafico::mostraElementos()
+		{
+			window->display();
+		}
+
+		void Gerenciador_Grafico::fechaJanela()
+		{
+			window->close();
+		}
 	}
 }
-
-Jogar::Gerenciadores::Gerenciador_Grafico::~Gerenciador_Grafico()
-{
-	if (window)
-	{
-		delete (window);
-		window = nullptr;
-	}
-}
-
-sf::RenderWindow* Jogar::Gerenciadores::Gerenciador_Grafico::getWindow()
-{
-	return window;
-}
-
-void Jogar::Gerenciadores::Gerenciador_Grafico::limpaJanela()
-{
-	window->clear();
-}
-
-void Jogar::Gerenciadores::Gerenciador_Grafico::desenhaElemento(sf::RectangleShape corpo)
-{
-	window->draw(corpo);
-}
-
-void Jogar::Gerenciadores::Gerenciador_Grafico::mostraElementos()
-{
-	window->display();
-}
-
-void Jogar::Gerenciadores::Gerenciador_Grafico::fechaJanela()
-{
-	window->close();
-}
-
-

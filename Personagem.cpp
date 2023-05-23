@@ -3,35 +3,42 @@
 
 namespace Jogar
 {
-		Personagem::Personagem(): dt(), num_vidas(10), podeAndar(true)
+		Personagem::Personagem() :
+			vel(sf::Vector2f(0.1f, 0.1f)), podeAndar(false), paraEsquerda(false), relogio(), dt(0.0f), num_vidas(10)
 		{
 		}
-		Personagem::Personagem(const sf::Vector2f pos, const sf::Vector2f tam):
-			vel(sf::Vector2f(0.1f, 0.1f))
+		
+		Personagem::Personagem(const sf::Vector2f pos, const sf::Vector2f tam)
 		{
 		}
+		
 		Personagem::~Personagem()
 		{
-
 		}
+
 		void Personagem::andar(const bool paraEsquerda)
 		{
 			podeAndar = true;
 			this->paraEsquerda = paraEsquerda;
 		}
+		
 		void Personagem::parar()
 		{
 			podeAndar = false;
 		}
+		
 		void Personagem::atualizar()
 		{
 		}
+		
 		void Personagem::colisao(Entidade* outraEntidade)
 		{
 		}
+		
 		void Personagem::executar()
 		{
 		}
+		
 		void Personagem::atualizarPosicao()
 		{
 			dt = relogio.getElapsedTime().asSeconds();
@@ -45,6 +52,7 @@ namespace Jogar
 		{
 			return num_vidas;
 		}
+		
 		int Personagem::operator-()
 		{
 			return num_vidas--;

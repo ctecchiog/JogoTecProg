@@ -17,10 +17,12 @@ namespace Jogar
 		srand(time(NULL));
 		moveAleatorio = rand() % 4;
 	}
+	
 	Inimigo::~Inimigo()
 	{
 
 	}
+	
 	void Inimigo::persegueJogador(sf::Vector2f posJogador, sf::Vector2f posInimigo)
 	{
 		if (posJogador.x - posInimigo.x > 0.0f)
@@ -40,6 +42,7 @@ namespace Jogar
 			relogio.restart();
 		}
 	}
+	
 	void Inimigo::movimentoAleatorio()
 	{
 		if (moveAleatorio == 0)
@@ -51,6 +54,7 @@ namespace Jogar
 		else
 			corpo.move(0.0f, -vel.y);
 	}
+	
 	void Inimigo::Inimigo::atualizar()
 	{
 		sf::Vector2f posJogador = jogador->getCorpo().getPosition();
@@ -67,6 +71,7 @@ namespace Jogar
 		if (outraEntidade->getID() == 1)
 			this->operator-();
 	}
+	
 	void Inimigo::executar()
 	{
 	}
