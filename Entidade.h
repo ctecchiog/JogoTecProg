@@ -1,7 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "Ente.h"
-#include "SFML\Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 namespace Jogar
 {
@@ -17,6 +17,7 @@ namespace Jogar
 			~Entidade();
 			const sf::RectangleShape getCorpo();
 			void setPos(sf::Vector2f pos);
+			void setTam(sf::Vector2f tam);
 			sf::Vector2f getPos();
 			const sf::Vector2f getTam();
 			void desenhar();

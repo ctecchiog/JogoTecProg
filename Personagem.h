@@ -1,7 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "Entidade.h"
-#include "SFML\Graphics.hpp"
+#include <SFML/Graphics.hpp>
 namespace Jogar
 {
 		class Personagem: public Entidade

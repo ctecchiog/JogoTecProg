@@ -1,5 +1,4 @@
 #include "Personagem.h"
-#include "SFML\Graphics.hpp"
 
 namespace Jogar
 {

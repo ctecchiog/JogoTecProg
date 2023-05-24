@@ -1,7 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "Gerenciador_Grafico.h"
-#include "SFML/Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 namespace Jogar
 {

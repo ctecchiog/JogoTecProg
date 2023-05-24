@@ -1,6 +1,5 @@
 #include "Inimigo.h"
-#include "SFML\Graphics.hpp"
-#include "SFML-2.5.1/include/SFML/System/Vector2.hpp"
+//#include "SFML-2.5.1/include/SFML/System/Vector2.hpp"
 
 namespace Jogar
 {
@@ -11,7 +10,9 @@ namespace Jogar
 	Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador* jogador) :
 		jogador(jogador)
 	{
-		corpo.setFillColor(sf::Color::Red);
+		this->corpo.setFillColor(sf::Color::Red);
+		this->corpo.setPosition(pos);
+		this->corpo.setSize(tam);
 		inicializa();
 		this->id = 2;
 		srand(time(NULL));

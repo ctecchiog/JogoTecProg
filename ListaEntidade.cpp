@@ -40,7 +40,6 @@ namespace Jogar
                 aux->atualizar();
                 window->draw(aux->getCorpo());
             }
-
         }
         /*void ListaEntidade::desenharEntidades()
         {
@@ -53,7 +52,5 @@ namespace Jogar
                 aux->desenhar();
             }
         }*/
-
     }
-
 }

@@ -1,11 +1,12 @@
 #include "Jogador.h"
-#include "SFML\Graphics.hpp"
  
 namespace Jogar
 {
 	Jogador::Jogador(const sf::Vector2f pos, const sf::Vector2f tam)
 	{
 		inicializa();
+		this->corpo.setPosition(pos);
+		this->corpo.setSize(tam);
 		this->id = 1;
 	}
 
