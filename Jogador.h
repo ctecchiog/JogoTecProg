@@ -16,7 +16,7 @@ namespace Jogar
 			~Jogador();
 			void move();
 			void atualizar();
-			void atualizar(const bool podeAndar, sf::Keyboard::Key tecla);
+			void atualizar(const bool podeAndar);
 			void colisao(Entidade* outraEntidade);
 			void executar();
 		};

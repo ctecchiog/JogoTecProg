@@ -25,34 +25,38 @@ namespace Jogar
 		{
 		}
 
-		void Jogador::atualizar(const bool podeAndar, sf::Keyboard::Key tecla)
+		void Jogador::atualizar(const bool podeAndar)
 		{
-			dt = relogio.getElapsedTime().asSeconds();
-			float ds;
+			//dt = relogio.getElapsedTime().asSeconds();
+			//float ds;
 			if (podeAndar)
 			{
-				if (tecla == sf::Keyboard::A || tecla == sf::Keyboard::Left)
+				if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
 				{
-					ds = vel.x * dt;
-					corpo.move(ds, 0.0f);
+					//ds = vel.x * dt;
+					//corpo.move(ds, 0.0f);
+					corpo.move(vel.x, 0.0f);
 				}
-				else if (tecla == sf::Keyboard::Right || tecla == sf::Keyboard::S)
+				else if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::S)))
 				{
-					ds = -vel.x * dt;
-					corpo.move(ds, 0.0f);
+					//ds = -vel.x * dt;
+					//corpo.move(ds, 0.0f);
+					corpo.move(-vel.x, 0.0f);
 				}
-				else if (tecla == sf::Keyboard::Up || tecla == sf::Keyboard::W)
+				else if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::W)))
 				{
-					ds = vel.y * dt;
-					corpo.move(0.0f, ds);
+					//ds = vel.y * dt;
+					//corpo.move(0.0f, ds);
+					corpo.move(0.0f, vel.y);
 				}
-				else if (tecla == sf::Keyboard::Down || tecla == sf::Keyboard::Z)
+				else if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Z)))
 				{
-					ds = -vel.y * dt;
-					corpo.move(0.0f, ds);
+					//ds = -vel.y * dt;
+					//corpo.move(0.0f, ds);
+					corpo.move(0.0f, -vel.y);
 				}
 			}
-			this->relogio.restart();
+			//this->relogio.restart();
 		}
 
 		void Jogador::colisao(Entidade* outraEntidade)

@@ -35,7 +35,7 @@ namespace Jogar
                 tecla == sf::Keyboard::S || tecla == sf::Keyboard::Right ||
                 tecla == sf::Keyboard::W || tecla == sf::Keyboard::Up ||
                 tecla == sf::Keyboard::Z || tecla == sf::Keyboard::Down)
-                pJogador->atualizar(true, tecla);
+                pJogador->atualizar(true);
             else if (tecla == sf::Keyboard::Escape)
                 pGrafico->fechaJanela();
         }
