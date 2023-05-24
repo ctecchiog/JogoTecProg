@@ -1,4 +1,4 @@
-#include "Fase.h"
+/*#include "Fase.h"
 
 namespace Jogar
 {
@@ -27,11 +27,11 @@ namespace Jogar
 	
 	void Fase::executar()
 	{
-		listaEntidade.executar();
+		listaEntidade.executar(pGrafico->getWindow());
 	}
 	
 	void Fase::desenhar()
 	{
 		listaEntidade.desenharEntidades();
 	}
-}
+}*/

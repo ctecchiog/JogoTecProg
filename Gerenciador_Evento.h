@@ -2,7 +2,6 @@
 #include "stdafx.h"
 #include "Jogador.h"
 #include "Inimigo.h"
-#include "Gerenciador_Grafico.h"
 #include "SFML/Graphics.hpp"
 
 namespace Jogar {

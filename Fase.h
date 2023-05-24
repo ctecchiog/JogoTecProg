@@ -3,7 +3,7 @@
 #include "Ente.h"
 #include "Gerenciador_Colisoes.h"
 #include <SFML\Graphics.hpp>
-
+/*
 namespace Jogar
 {
 	class Fase : public Ente
@@ -18,4 +18,4 @@ namespace Jogar
 		void executar();
 		void desenhar();
 	};
-}
+}*/

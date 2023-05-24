@@ -48,7 +48,7 @@ namespace Jogar
         void Gerenciador_Evento::executar()
         {
             sf::Event evento;
-            if (pGrafico->getWindow()->pollEvent(evento))
+            while (pGrafico->getWindow()->pollEvent(evento))
             {
                 if (evento.type == sf::Event::KeyPressed)
                     verificaTeclaPressionada(evento.key.code);

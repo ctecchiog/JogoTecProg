@@ -21,8 +21,8 @@ namespace Jogar
             int getTam();
             Entidade* operator[](int pos);
             void limparLista();
-            void executar();
-            void desenharEntidades();
+            void executar(sf::RenderWindow* window);
+            //void desenharEntidades();
         };
 
     }

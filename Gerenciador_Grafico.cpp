@@ -52,14 +52,12 @@ namespace Jogar
 
 		void Gerenciador_Grafico::desenhaElemento(sf::RectangleShape corpo)
 		{
-			if (window)
 			window->draw(corpo);
 		}
 
 		void Gerenciador_Grafico::mostraElementos()
 		{
-			if (window)
-				window->display();
+			window->display();
 		}
 
 		void Gerenciador_Grafico::fechaJanela()

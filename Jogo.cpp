@@ -6,7 +6,7 @@ namespace Jogar
 	Jogo::Jogo() 
 		: pEvento(pEvento->getGerEvento()), pGrafico(pGrafico->getGerenciadorGrafico()), pColisoes(new Gerenciadores::Gerenciador_Colisoes(&listaEntidade))
 	{
-		instanciaEntidades();
+		//instanciaEntidades();
 		executar();
 	}
 
@@ -21,7 +21,7 @@ namespace Jogar
 		{
 			pEvento->executar();
 			pGrafico->limpaJanela();
-			listaEntidade.executar();
+			listaEntidade.executar(pGrafico->getWindow());
 			pGrafico->mostraElementos();
 		}
 	}
