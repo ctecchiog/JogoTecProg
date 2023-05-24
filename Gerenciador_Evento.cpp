@@ -31,18 +31,24 @@ namespace Jogar
 
         void Gerenciador_Evento::verificaTeclaPressionada(sf::Keyboard::Key tecla)
         {
-            if (tecla == sf::Keyboard::A || tecla == sf::Keyboard::Left)
-                pJogador->andar(true);
-            else if (tecla == sf::Keyboard::S || tecla == sf::Keyboard::Right)
-                pJogador->andar(false);
+            if (tecla == sf::Keyboard::A || tecla == sf::Keyboard::Left ||
+                tecla == sf::Keyboard::S || tecla == sf::Keyboard::Right ||
+                tecla == sf::Keyboard::W || tecla == sf::Keyboard::Up ||
+                tecla == sf::Keyboard::Z || tecla == sf::Keyboard::Down)
+                pJogador->atualizarPosicao(true, tecla);
             else if (tecla == sf::Keyboard::Escape)
                 pGrafico->fechaJanela();
         }
 
         void Gerenciador_Evento::verificaTeclaSolta(sf::Keyboard::Key tecla)
         {
-            if (tecla == sf::Keyboard::A || tecla == sf::Keyboard::Left || tecla == sf::Keyboard::S || tecla == sf::Keyboard::Right)
+            if (tecla == sf::Keyboard::A || tecla == sf::Keyboard::Left ||
+                tecla == sf::Keyboard::S || tecla == sf::Keyboard::Right ||
+                tecla == sf::Keyboard::W || tecla == sf::Keyboard::Up || 
+                tecla == sf::Keyboard::Z || tecla == sf::Keyboard::Down)
+            {
                 pJogador->parar();
+            }
         }
 
         void Gerenciador_Evento::executar()

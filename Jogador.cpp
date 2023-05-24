@@ -8,6 +8,7 @@ namespace Jogar
 		this->corpo.setPosition(pos);
 		this->corpo.setSize(tam);
 		this->id = 1;
+		this->podeAndar = true;
 	}
 
 	Jogador::~Jogador()
@@ -22,8 +23,6 @@ namespace Jogar
 
 	void Jogador::atualizar()
 	{
-		if (podeAndar)
-			atualizarPosicao();
 		relogio.restart();
 	}
 
