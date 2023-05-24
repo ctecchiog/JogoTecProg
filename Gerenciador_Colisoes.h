@@ -4,15 +4,18 @@
 #include "ListaEntidade.h"
 #include <SFML/Graphics.hpp>
 
-namespace Jogar {
-	namespace Gerenciadores {
-		class Gerenciador_Colisoes {
+namespace Jogar 
+{
+	namespace Gerenciadores 
+	{
+		class Gerenciador_Colisoes 
+		{
 		private:
 			Lista::ListaEntidade* listaEntidade;
 		public:
 			Gerenciador_Colisoes(Lista::ListaEntidade* listaEntidade);
 			~Gerenciador_Colisoes();
-			const sf::Vector2f calculaColisao(Entidade* ent1, Entidade* ent2);
+			const sf::Vector2f calculaColisao(Entidades::Entidade* ent1, Entidades::Entidade* ent2);
 			void executar();
 		};
 	}

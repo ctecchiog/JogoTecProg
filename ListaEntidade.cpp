@@ -11,10 +11,10 @@ namespace Jogar
         ListaEntidade::~ListaEntidade(){
 
         }
-        void ListaEntidade::addEntidade(Entidade* entidade){
+        void ListaEntidade::addEntidade(Entidades::Entidade* entidade){
             objListaEntidade.addElemento(entidade);
         }
-        void ListaEntidade::removerEntidade(Entidade* entidade){
+        void ListaEntidade::removerEntidade(Entidades::Entidade* entidade){
             objListaEntidade.removerElemento(entidade);
         }
         void ListaEntidade::removerEntidade(int pos){
@@ -23,7 +23,7 @@ namespace Jogar
         int ListaEntidade::getTam(){
             return objListaEntidade.getTam();
         }
-        Entidade* ListaEntidade::operator[](int pos){
+        Entidades::Entidade* ListaEntidade::operator[](int pos){
             return objListaEntidade.operator[](pos);
         }
         void ListaEntidade::limparLista(){
@@ -33,7 +33,7 @@ namespace Jogar
         {
             //atualiza e desenha as entidades
             int tam = objListaEntidade.getTam();
-            Entidade* aux = nullptr;
+            Entidades::Entidade* aux = nullptr;
             for(int i = 0; i < tam; i++)
             {
                 aux = objListaEntidade.operator[](i);
@@ -45,7 +45,7 @@ namespace Jogar
         {
             //apenas desenha as Entidades
             int tam = objListaEntidade.getTam();
-            Entidade* aux = nullptr;
+            Entidades::Entidade* aux = nullptr;
             for(int i = 0; i < tam; i++)
             {
                 aux = objListaEntidade.operator[](i);

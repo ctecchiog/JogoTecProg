@@ -5,7 +5,9 @@
 
 namespace Jogar
 {
-		class Entidade: public Ente
+	namespace Entidades
+	{
+		class Entidade : public Ente
 		{
 		protected:
 			sf::RectangleShape corpo;
@@ -25,5 +27,5 @@ namespace Jogar
 			virtual void colisao(Entidade* outraEntidade);
 			virtual void executar() = 0;
 		};
-
+	}
 }

@@ -3,9 +3,11 @@
 #include <SFML/Graphics.hpp>
 #include "Personagem.h"
 
-namespace Jogar 
+namespace Jogar
 {
-		class Jogador: public Personagem 
+	namespace Entidades 
+	{
+		class Jogador : public Personagem
 		{
 		private:
 			void inicializa();
@@ -14,7 +16,10 @@ namespace Jogar
 			~Jogador();
 			void move();
 			void atualizar();
+			void atualizar(const bool podeAndar, sf::Keyboard::Key tecla);
 			void colisao(Entidade* outraEntidade);
 			void executar();
 		};
+
+	}
 }

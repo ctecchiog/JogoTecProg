@@ -1,58 +1,62 @@
 #include "Entidade.h"
 
-namespace Jogar {
-	Entidade::Entidade()
+namespace Jogar
+{
+	namespace Entidades
 	{
-	}
-	Entidade::Entidade(const sf::Vector2f pos, const sf::Vector2f tam) :
-		corpo(sf::RectangleShape(tam)), pos(pos), tam(tam)
-	{
-		
-	}
+		Entidade::Entidade()
+		{
+		}
+		Entidade::Entidade(const sf::Vector2f pos, const sf::Vector2f tam) :
+			corpo(sf::RectangleShape(tam)), pos(pos), tam(tam)
+		{
 
-	Entidade::~Entidade()
-	{
-	}
+		}
 
-	const sf::RectangleShape Entidade::getCorpo()
-	{
-		return corpo;
-	}
+		Entidade::~Entidade()
+		{
+		}
 
-	void Entidade::setPos(sf::Vector2f pos)
-	{
-		corpo.setPosition(pos);
-		this->pos = pos;
-	}
+		const sf::RectangleShape Entidade::getCorpo()
+		{
+			return corpo;
+		}
 
-	void Entidade::setTam(sf::Vector2f tam)
-	{
-		corpo.setSize(tam);
-		this->tam = tam;
-	}
+		void Entidade::setPos(sf::Vector2f pos)
+		{
+			corpo.setPosition(pos);
+			this->pos = pos;
+		}
 
-	sf::Vector2f Entidade::getPos()
-	{
-		return pos;
-	}
+		void Entidade::setTam(sf::Vector2f tam)
+		{
+			corpo.setSize(tam);
+			this->tam = tam;
+		}
 
-	const sf::Vector2f Entidade::getTam()
-	{
-		return corpo.getSize();
-	}
+		sf::Vector2f Entidade::getPos()
+		{
+			return pos;
+		}
 
-	void Entidade::desenhar()
-	{
-		pGrafico->desenhaElemento(corpo);
-	}
+		const sf::Vector2f Entidade::getTam()
+		{
+			return corpo.getSize();
+		}
 
-	void Entidade::atualizar()
-	{
-	}
-	void Entidade::colisao(Entidade* outraEntidade)
-	{
-	}
-	void Entidade::executar()
-	{
+		void Entidade::desenhar()
+		{
+			pGrafico->desenhaElemento(corpo);
+		}
+
+		void Entidade::atualizar()
+		{
+		}
+		void Entidade::colisao(Entidade* outraEntidade)
+		{
+		}
+		void Entidade::executar()
+		{
+		}
 	}
 }

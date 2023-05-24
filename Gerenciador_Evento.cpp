@@ -13,18 +13,18 @@ namespace Jogar
         {
         }
 
-        Jogar::Gerenciadores::Gerenciador_Evento::~Gerenciador_Evento()
+        Gerenciador_Evento::~Gerenciador_Evento()
         {
         }
 
-        Gerenciador_Evento* Jogar::Gerenciadores::Gerenciador_Evento::getGerEvento()
+        Gerenciador_Evento* Gerenciador_Evento::getGerEvento()
         {
             if (pEvento == nullptr)
                 pEvento = new Gerenciador_Evento();
             return pEvento;
         }
 
-        void Gerenciador_Evento::setJogador(Jogador* pJogador)
+        void Gerenciador_Evento::setJogador(Entidades::Jogador* pJogador)
         {
             this->pJogador = pJogador;
         }
@@ -35,7 +35,7 @@ namespace Jogar
                 tecla == sf::Keyboard::S || tecla == sf::Keyboard::Right ||
                 tecla == sf::Keyboard::W || tecla == sf::Keyboard::Up ||
                 tecla == sf::Keyboard::Z || tecla == sf::Keyboard::Down)
-                pJogador->atualizarPosicao(true, tecla);
+                pJogador->atualizar(true, tecla);
             else if (tecla == sf::Keyboard::Escape)
                 pGrafico->fechaJanela();
         }

@@ -10,9 +10,11 @@
 #define RAIO_PERSEGUIRX 200.0f
 #define RAIO_PERSEGUIRY 200.0f
 
-namespace Jogar 
+namespace Jogar
 {
-		class Inimigo: public Personagem 
+	namespace Entidades 
+	{
+		class Inimigo : public Personagem
 		{
 		private:
 			Jogador* jogador;
@@ -27,4 +29,5 @@ namespace Jogar
 			void colisao(Entidade* outraEntidade);
 			void executar();
 		};
+	}
 }

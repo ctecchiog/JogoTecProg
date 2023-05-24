@@ -4,12 +4,14 @@
 #include <SFML/Graphics.hpp>
 namespace Jogar
 {
-		class Personagem: public Entidade
+	namespace Entidades
+	{
+		class Personagem : public Entidade
 		{
 		protected:
 			sf::Vector2f vel;
-			bool podeAndar;
 			sf::Clock relogio;
+			bool podeAndar;
 			float dt;
 			int num_vidas;
 		public:
@@ -20,8 +22,8 @@ namespace Jogar
 			virtual void atualizar() = 0;
 			virtual void colisao(Entidade* outraEntidade);
 			virtual void executar() = 0;
-			void atualizarPosicao(const bool podeAndar, sf::Keyboard::Key tecla);
 			int getNumVidas();
 			int operator-();
 		};
+	}
 }
