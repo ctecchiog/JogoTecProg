@@ -17,15 +17,14 @@ namespace Jogar
 		class Inimigo : public Personagem
 		{
 		private:
-			Jogador* jogador;
+			Jogador* jogador1;
+			Jogador* jogador2;
 			short moveAleatorio;
-			void inicializa();
 		public:
-			Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador* jogador);
+			Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador* jogador1, Jogador* jogador2);
 			~Inimigo();
 			void persegueJogador(sf::Vector2f posJogador, sf::Vector2f posInimigo);
 			void movimentoAleatorio();
-			void atualizar();
 			void colisao(Entidade* outraEntidade);
 			void executar();
 		};

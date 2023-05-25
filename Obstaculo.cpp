@@ -16,10 +16,6 @@ namespace Jogar
 		{
 		}
 
-		void Obstaculo::atualizar()
-		{
-		}
-
 		void Obstaculo::colisao(Entidade* outraEntidade)
 		{
 		}

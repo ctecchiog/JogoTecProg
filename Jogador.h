@@ -9,17 +9,14 @@ namespace Jogar
 	{
 		class Jogador : public Personagem
 		{
-		private:
-			void inicializa();
+		protected:
+			//float ds;
 		public:
+			Jogador();
 			Jogador(const sf::Vector2f pos, const sf::Vector2f tam);
 			~Jogador();
-			void move();
-			void atualizar();
-			void atualizar(const bool podeAndar);
-			void colisao(Entidade* outraEntidade);
-			void executar();
+			virtual void colisao(Entidade* outraEntidade) = 0;
+			virtual void executar() = 0;
 		};
-
 	}
 }

@@ -13,7 +13,6 @@ namespace Jogar
 		public:
 			Obstaculo(const sf::Vector2f pos, const sf::Vector2f tam);
 			~Obstaculo();
-			void atualizar();
 			void colisao(Entidade* outraEntidade);
 			void executar();
 		};

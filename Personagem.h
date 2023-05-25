@@ -11,7 +11,7 @@ namespace Jogar
 		protected:
 			sf::Vector2f vel;
 			sf::Clock relogio;
-			bool podeAndar;
+			//bool podeAndar;
 			float dt;
 			int num_vidas;
 		public:
@@ -19,8 +19,7 @@ namespace Jogar
 			Personagem(const sf::Vector2f pos, const sf::Vector2f tam);
 			~Personagem();
 			void parar();
-			virtual void atualizar() = 0;
-			virtual void colisao(Entidade* outraEntidade);
+			virtual void colisao(Entidade* outraEntidade) = 0;
 			virtual void executar() = 0;
 			int getNumVidas();
 			int operator-();

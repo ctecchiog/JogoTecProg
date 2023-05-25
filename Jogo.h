@@ -8,8 +8,8 @@ namespace Jogar
 	class Jogo
 	{
 	private:
-		//Gerenciadores::Gerenciador_Evento* pEvento;
-		Entidades::Jogador* pJogador;
+		Entidades::Jogador* pJogador1;
+		Entidades::Jogador* pJogador2;
 		Gerenciadores::Gerenciador_Grafico* pGrafico;
 		Gerenciadores::Gerenciador_Colisoes* pColisoes;
 		Lista::ListaEntidade listaEntidade;

@@ -31,26 +31,15 @@ namespace Jogar
         }
         void ListaEntidade::executar(sf::RenderWindow* window)
         {
-            //atualiza e desenha as entidades
+            //desenha as entidades
             int tam = objListaEntidade.getTam();
             Entidades::Entidade* aux = nullptr;
             for(int i = 0; i < tam; i++)
             {
                 aux = objListaEntidade.operator[](i);
-                aux->atualizar();
+                aux->executar();
                 window->draw(aux->getCorpo());
             }
         }
-        /*void ListaEntidade::desenharEntidades()
-        {
-            //apenas desenha as Entidades
-            int tam = objListaEntidade.getTam();
-            Entidades::Entidade* aux = nullptr;
-            for(int i = 0; i < tam; i++)
-            {
-                aux = objListaEntidade.operator[](i);
-                aux->desenhar();
-            }
-        }*/
     }
 }

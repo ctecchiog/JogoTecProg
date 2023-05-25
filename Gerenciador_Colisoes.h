@@ -1,8 +1,8 @@
 #pragma once
 #include "stdafx.h"
-//#include "Gerenciador_Evento.h"
 #include "ListaEntidade.h"
-#include "Jogador.h"
+#include "Tenth.h"
+#include "Eleventh.h"
 #include "Inimigo.h"
 #include "Obstaculo.h"
 #include <SFML/Graphics.hpp>

@@ -22,7 +22,6 @@ namespace Jogar
             Entidades::Entidade* operator[](int pos);
             void limparLista();
             void executar(sf::RenderWindow* window);
-            //void desenharEntidades();
         };
 
     }
