@@ -4,7 +4,7 @@
 namespace Jogar 
 {
 	Jogo::Jogo() 
-		: pEvento(pEvento->getGerEvento()), pGrafico(pGrafico->getGerenciadorGrafico()), pColisoes(new Gerenciadores::Gerenciador_Colisoes(&listaEntidade))
+		: /*pEvento(pEvento->getGerEvento()), */pGrafico(pGrafico->getGerenciadorGrafico()), pColisoes(new Gerenciadores::Gerenciador_Colisoes(&listaEntidade))
 	{
 		instanciaEntidades();
 		executar();
@@ -19,11 +19,25 @@ namespace Jogar
 	{
 		while (pGrafico->getWindow()->isOpen())
 		{
-			pEvento->executar();
+			sf::Event evento;
+			while (pGrafico->getWindow()->pollEvent(evento))
+			{
+				if (evento.type == sf::Event::KeyPressed)
+					verificaTeclaPressionada(evento.key.code);
+				else if (evento.type == sf::Event::KeyReleased)
+					verificaTeclaSolta(evento.key.code);
+				else if (evento.type == sf::Event::Closed)
+					pGrafico->fechaJanela();
+			}
 			pGrafico->limpaJanela();
 			listaEntidade.executar(pGrafico->getWindow());
 			pGrafico->mostraElementos();
 		}
+	}
+
+	void Jogo::setJogador(Entidades::Jogador* pJogador)
+	{
+		this->pJogador = pJogador;
 	}
 
 	void Jogo::instanciaEntidades()
@@ -48,6 +62,28 @@ namespace Jogar
 		listaEntidade.addEntidade(p4);
 		listaEntidade.addEntidade(p5);
 		listaEntidade.addEntidade(p6);
-		pEvento->setJogador(jogador);
+
+		setJogador(jogador);
+	}
+	void Jogo::verificaTeclaPressionada(sf::Keyboard::Key tecla)
+	{
+		if (tecla == sf::Keyboard::A || tecla == sf::Keyboard::Left ||
+			tecla == sf::Keyboard::S || tecla == sf::Keyboard::Right ||
+			tecla == sf::Keyboard::W || tecla == sf::Keyboard::Up ||
+			tecla == sf::Keyboard::Z || tecla == sf::Keyboard::Down)
+			pJogador->atualizar(true);
+		else if (tecla == sf::Keyboard::Escape)
+			pGrafico->fechaJanela();
+	}
+
+	void Jogo::verificaTeclaSolta(sf::Keyboard::Key tecla)
+	{
+		if (tecla == sf::Keyboard::A || tecla == sf::Keyboard::Left ||
+			tecla == sf::Keyboard::S || tecla == sf::Keyboard::Right ||
+			tecla == sf::Keyboard::W || tecla == sf::Keyboard::Up ||
+			tecla == sf::Keyboard::Z || tecla == sf::Keyboard::Down)
+		{
+			pJogador->parar();
+		}
 	}
 }

@@ -3,7 +3,7 @@
 namespace Jogar
 {
     namespace Gerenciadores
-    {
+    { /*
         Gerenciador_Evento* Gerenciador_Evento::pEvento = nullptr;
         Gerenciador_Grafico* Gerenciador_Evento::pGrafico = Gerenciador_Grafico::getGerenciadorGrafico();
 
@@ -63,6 +63,6 @@ namespace Jogar
                 else if (evento.type == sf::Event::Closed)
                     pGrafico->fechaJanela();
             }
-        }
+        } */
     }
 }

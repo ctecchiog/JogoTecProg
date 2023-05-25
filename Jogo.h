@@ -8,7 +8,8 @@ namespace Jogar
 	class Jogo
 	{
 	private:
-		Gerenciadores::Gerenciador_Evento* pEvento;
+		//Gerenciadores::Gerenciador_Evento* pEvento;
+		Entidades::Jogador* pJogador;
 		Gerenciadores::Gerenciador_Grafico* pGrafico;
 		Gerenciadores::Gerenciador_Colisoes* pColisoes;
 		Lista::ListaEntidade listaEntidade;
@@ -16,6 +17,9 @@ namespace Jogar
 		Jogo();
 		~Jogo();
 		void executar();
+		void setJogador(Entidades::Jogador* pJogador);
 		void instanciaEntidades();
+		void verificaTeclaPressionada(sf::Keyboard::Key tecla);
+		void verificaTeclaSolta(sf::Keyboard::Key tecla);
 	};
 }

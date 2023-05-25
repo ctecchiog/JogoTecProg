@@ -1,7 +1,10 @@
 #pragma once
 #include "stdafx.h"
-#include "Gerenciador_Evento.h"
+//#include "Gerenciador_Evento.h"
 #include "ListaEntidade.h"
+#include "Jogador.h"
+#include "Inimigo.h"
+#include "Obstaculo.h"
 #include <SFML/Graphics.hpp>
 
 namespace Jogar 
