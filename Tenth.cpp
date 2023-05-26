@@ -4,7 +4,10 @@ namespace Jogar
 {
 	namespace Entidades
 	{
-		Tenth::Tenth(const sf::Vector2f pos, const sf::Vector2f tam)
+		Tenth::Tenth()
+		{
+		}
+		Tenth::Tenth(const sf::Vector2f pos, const sf::Vector2f tam): Tenth()
 		{
 			this->corpo.setFillColor(sf::Color::Green);
 			this->corpo.setPosition(pos);

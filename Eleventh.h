@@ -11,6 +11,7 @@ namespace Jogar
 		private:
 
 		public:
+			Eleventh();
 			Eleventh(const sf::Vector2f pos, const sf::Vector2f tam);
 			~Eleventh();
 			void colisao(Entidade* outraEntidade);

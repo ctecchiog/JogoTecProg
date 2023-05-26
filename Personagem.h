@@ -11,7 +11,6 @@ namespace Jogar
 		protected:
 			sf::Vector2f vel;
 			sf::Clock relogio;
-			//bool podeAndar;
 			float dt;
 			int num_vidas;
 		public:

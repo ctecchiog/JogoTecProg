@@ -19,7 +19,7 @@ namespace Jogar
 		void executar();
 		void setJogador(Entidades::Jogador* pJogador);
 		void instanciaEntidades();
-		void verificaTeclaPressionada(sf::Keyboard::Key tecla);
-		void verificaTeclaSolta(sf::Keyboard::Key tecla);
+		//void verificaTeclaPressionada(sf::Keyboard::Key tecla);
+		//void verificaTeclaSolta(sf::Keyboard::Key tecla);
 	};
 }

@@ -4,7 +4,10 @@ namespace Jogar
 {
 	namespace Entidades 
 	{
-		Obstaculo::Obstaculo(const sf::Vector2f pos, const sf::Vector2f tam)
+		Obstaculo::Obstaculo()
+		{
+		}
+		Obstaculo::Obstaculo(const sf::Vector2f pos, const sf::Vector2f tam): Obstaculo()
 		{
 			this->corpo.setFillColor(sf::Color::Magenta);
 			this->corpo.setPosition(pos);

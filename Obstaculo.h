@@ -11,6 +11,7 @@ namespace Jogar
 		private:
 
 		public:
+			Obstaculo();
 			Obstaculo(const sf::Vector2f pos, const sf::Vector2f tam);
 			~Obstaculo();
 			void colisao(Entidade* outraEntidade);

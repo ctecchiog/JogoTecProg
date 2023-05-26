@@ -24,9 +24,43 @@ namespace Jogar
 			while (pGrafico->getWindow()->pollEvent(evento))
 			{
 				if (evento.type == sf::Event::KeyPressed)
-					verificaTeclaPressionada(evento.key.code);
+					//verificaTeclaPressionada(evento.key.code);
+				{
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left) ||
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right) ||
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) ||
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
+					{
+						pJogador1->executar();
+					}
+					else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A) ||
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S) ||
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) ||
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z))
+					{
+						pJogador2->executar();
+					}
+					else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))
+						pGrafico->fechaJanela();
+				}
 				else if (evento.type == sf::Event::KeyReleased)
-					verificaTeclaSolta(evento.key.code);
+					//verificaTeclaSolta(evento.key.code);
+				{
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left) || 
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right) ||
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) || 
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
+					{
+						pJogador1->parar();
+					}
+					else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A) ||
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S) ||
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) ||
+						sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z))
+					{
+						pJogador2->parar();
+					}
+				}
 				else if (evento.type == sf::Event::Closed)
 					pGrafico->fechaJanela();
 			}
@@ -73,9 +107,9 @@ namespace Jogar
 		if (pJogador1 != pJogador2)
 			setJogador(eleventh);
 	}
-	void Jogo::verificaTeclaPressionada(sf::Keyboard::Key tecla)
+	/*void Jogo::verificaTeclaPressionada(sf::Keyboard::Key tecla)
 	{
-		if (tecla == sf::Keyboard::Left ||tecla == sf::Keyboard::Right ||
+		if (tecla == sf::Keyboard::Left || tecla == sf::Keyboard::Right ||
 			tecla == sf::Keyboard::Up ||tecla == sf::Keyboard::Down)
 		{
 			pJogador1->executar();
@@ -101,5 +135,5 @@ namespace Jogar
 		{
 			pJogador2->parar();
 		}
-	}
+	}*/
 }

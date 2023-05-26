@@ -6,7 +6,7 @@ namespace Jogar
 		Jogador::Jogador()
 		{
 		}
-		Jogador::Jogador(const sf::Vector2f pos, const sf::Vector2f tam)//: 
+		Jogador::Jogador(const sf::Vector2f pos, const sf::Vector2f tam): Jogador()
 			//ds()
 		{
 			

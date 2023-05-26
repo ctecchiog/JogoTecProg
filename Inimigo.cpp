@@ -3,8 +3,11 @@
 namespace Jogar
 {
 	namespace Entidades {
-		Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador* jogador1, Jogador* jogador2) :
-			jogador1(jogador1), jogador2(jogador2)
+		Inimigo::Inimigo():
+			jogador1(jogador1), jogador2(jogador2), moveAleatorio()
+		{
+		}
+		Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador* jogador1, Jogador* jogador2): Inimigo()
 		{
 			this->corpo.setPosition(pos);
 			this->corpo.setSize(tam);

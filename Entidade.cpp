@@ -4,11 +4,11 @@ namespace Jogar
 {
 	namespace Entidades
 	{
-		Entidade::Entidade()
+		Entidade::Entidade(): corpo(sf::RectangleShape(tam)), 
+			pos(sf::Vector2f(10.0f, 10.0f)), tam(sf::Vector2f(10.0f, 10.0f))	
 		{
 		}
-		Entidade::Entidade(const sf::Vector2f pos, const sf::Vector2f tam) :
-			corpo(sf::RectangleShape(tam)), pos(pos), tam(tam)
+		Entidade::Entidade(const sf::Vector2f pos, const sf::Vector2f tam): Entidade()
 		{
 			cout << "chamou" << endl;
 		}

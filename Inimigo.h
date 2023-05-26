@@ -21,6 +21,7 @@ namespace Jogar
 			Jogador* jogador2;
 			short moveAleatorio;
 		public:
+			Inimigo();
 			Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador* jogador1, Jogador* jogador2);
 			~Inimigo();
 			void persegueJogador(sf::Vector2f posJogador, sf::Vector2f posInimigo);
