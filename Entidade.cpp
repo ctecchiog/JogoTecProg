@@ -4,6 +4,7 @@ namespace Jogar
 {
 	namespace Entidades
 	{
+		// Doglas acha que a segunda construtora nao ta sendo chamada, ver isso
 		Entidade::Entidade(): pos(sf::Vector2f(10.0f, 10.0f)), tam(sf::Vector2f(10.0f, 10.0f)),
 			corpo(tam)
 		{

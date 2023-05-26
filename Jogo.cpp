@@ -3,8 +3,9 @@
 
 namespace Jogar 
 {
-	Jogo::Jogo() 
-		: pGrafico(pGrafico->getGerenciadorGrafico()), pColisoes(new Gerenciadores::Gerenciador_Colisoes(&listaEntidade)),
+	Jogo::Jogo(): 
+		pGrafico(pGrafico->getGerenciadorGrafico()), 
+		pColisoes(new Gerenciadores::Gerenciador_Colisoes(&listaEntidade)),
 		pJogador1(pJogador1), pJogador2(pJogador2)
 	{
 		instanciaEntidades();
