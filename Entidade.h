@@ -17,8 +17,8 @@ namespace Jogar
 			Entidade();
 			Entidade(const sf::Vector2f pos, const sf::Vector2f tam);
 			~Entidade();
-			const sf::RectangleShape* getCorpo();
-			sf::Vector2f* getPos();
+			const sf::RectangleShape getCorpo();
+			sf::Vector2f getPos();
 			const sf::Vector2f getTam();
 			virtual void colisao(Entidade* outraEntidade);
 			virtual void executar() = 0;

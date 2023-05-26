@@ -72,9 +72,9 @@ namespace Jogar
 
 	void Jogo::setJogador(Entidades::Jogador* pJogador)
 	{
-		this->pJogador1 = pJogador;
+		pJogador1 = pJogador;
 		if (pJogador1 != pJogador2)
-			this->pJogador2 = pJogador;
+			pJogador2 = pJogador;
 	}
 
 	void Jogo::instanciaEntidades()

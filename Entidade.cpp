@@ -17,14 +17,14 @@ namespace Jogar
 		{
 		}
 
-		const sf::RectangleShape* Entidade::getCorpo()
+		const sf::RectangleShape Entidade::getCorpo()
 		{
-			return &corpo;
+			return corpo;
 		}
 
-		sf::Vector2f* Entidade::getPos()
+		sf::Vector2f Entidade::getPos()
 		{
-			return &pos;
+			return pos;
 		}
 
 		const sf::Vector2f Entidade::getTam()

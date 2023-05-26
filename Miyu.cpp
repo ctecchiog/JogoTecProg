@@ -9,10 +9,10 @@ namespace Jogar
 		}
 		Miyu::Miyu(const sf::Vector2f pos, const sf::Vector2f tam): Miyu()
 		{
-			this->corpo.setFillColor(sf::Color::Green);
-			this->corpo.setPosition(pos);
-			this->corpo.setSize(tam);
-			this->id = 1;
+			corpo.setFillColor(sf::Color::Green);
+			corpo.setPosition(pos);
+			corpo.setSize(tam);
+			id = 1;
 		}
 		Miyu::~Miyu()
 		{
@@ -22,26 +22,26 @@ namespace Jogar
 			if (outraEntidade->getID() == 2)
 			{
 				this->operator-();
-				this->corpo.setFillColor(sf::Color::White);
+				corpo.setFillColor(sf::Color::White);
 			}
 		}
 		void Miyu::executar()
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) 
 			{
-				this->corpo.move(vel.x, 0.0f);
+				corpo.move(vel.x, 0.0f);
 			}
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 			{
-				this->corpo.move(-vel.x, 0.0f);
+				corpo.move(-vel.x, 0.0f);
 			}
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 			{
-				this->corpo.move(0.0f, vel.y);
+				corpo.move(0.0f, vel.y);
 			}
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 			{
-				this->corpo.move(0.0f, -vel.y);
+				corpo.move(0.0f, -vel.y);
 			}
 		}
 	}
