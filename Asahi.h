@@ -6,14 +6,14 @@ namespace Jogar
 {
 	namespace Entidades
 	{
-		class Tenth : public Jogador
+		class Asahi : public Jogador
 		{
 		private:
 
 		public:
-			Tenth();
-			Tenth(const sf::Vector2f pos, const sf::Vector2f tam);
-			~Tenth();
+			Asahi();
+			Asahi(const sf::Vector2f pos, const sf::Vector2f tam);
+			~Asahi();
 			void colisao(Entidade* outraEntidade);
 			void executar();
 		};

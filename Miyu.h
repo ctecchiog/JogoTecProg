@@ -6,14 +6,14 @@ namespace Jogar
 {
 	namespace Entidades
 	{
-		class Eleventh : public Jogador
-		{
+		class Miyu : public Jogador
+		{ // ela/dela
 		private:
 
 		public:
-			Eleventh();
-			Eleventh(const sf::Vector2f pos, const sf::Vector2f tam);
-			~Eleventh();
+			Miyu();
+			Miyu(const sf::Vector2f pos, const sf::Vector2f tam);
+			~Miyu();
 			void colisao(Entidade* outraEntidade);
 			void executar();
 		};

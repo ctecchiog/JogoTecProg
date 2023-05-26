@@ -1,23 +1,23 @@
-#include "Eleventh.h"
+#include "Asahi.h"
 
 namespace Jogar
 {
 	namespace Entidades
 	{
-		Eleventh::Eleventh()
+		Asahi::Asahi()
 		{
 		}
-		Eleventh::Eleventh(const sf::Vector2f pos, const sf::Vector2f tam): Eleventh()
+		Asahi::Asahi(const sf::Vector2f pos, const sf::Vector2f tam): Asahi()
 		{
 			this->corpo.setFillColor(sf::Color::Yellow);
 			this->corpo.setPosition(pos);
 			this->corpo.setSize(tam);
 			this->id = 1;
 		}
-		Eleventh::~Eleventh()
+		Asahi::~Asahi()
 		{
 		}
-		void Eleventh::colisao(Entidade* outraEntidade)
+		void Asahi::colisao(Entidade* outraEntidade)
 		{
 			if (outraEntidade->getID() == 2)
 			{
@@ -25,7 +25,7 @@ namespace Jogar
 				this->corpo.setFillColor(sf::Color::White);
 			}
 		}
-		void Eleventh::executar()
+		void Asahi::executar()
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 			{

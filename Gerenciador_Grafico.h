@@ -18,7 +18,7 @@ namespace Jogar
 			static Gerenciador_Grafico* getGerenciadorGrafico();
 			sf::RenderWindow* getWindow();
 			void limpaJanela();
-			void desenhaElemento(sf::RectangleShape corpo);
+			//void desenhaElemento(sf::RectangleShape corpo);
 			void mostraElementos();
 			void fechaJanela();
 		};

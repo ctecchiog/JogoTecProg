@@ -151,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Eleventh.cpp" />
+    <ClCompile Include="Asahi.cpp" />
     <ClCompile Include="Ente.cpp" />
     <ClCompile Include="Entidade.cpp" />
     <ClCompile Include="Fase.cpp" />
@@ -164,10 +164,10 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Obstaculo.cpp" />
     <ClCompile Include="Personagem.cpp" />
-    <ClCompile Include="Tenth.cpp" />
+    <ClCompile Include="Miyu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Eleventh.h" />
+    <ClInclude Include="Asahi.h" />
     <ClInclude Include="Fase.h" />
     <ClInclude Include="Elemento.h" />
     <ClInclude Include="Ente.h" />
@@ -182,7 +182,7 @@
     <ClInclude Include="Obstaculo.h" />
     <ClInclude Include="Personagem.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Tenth.h" />
+    <ClInclude Include="Miyu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

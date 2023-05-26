@@ -1,23 +1,23 @@
-#include "Tenth.h"
+#include "Miyu.h"
 
 namespace Jogar
 {
 	namespace Entidades
 	{
-		Tenth::Tenth()
+		Miyu::Miyu()
 		{
 		}
-		Tenth::Tenth(const sf::Vector2f pos, const sf::Vector2f tam): Tenth()
+		Miyu::Miyu(const sf::Vector2f pos, const sf::Vector2f tam): Miyu()
 		{
 			this->corpo.setFillColor(sf::Color::Green);
 			this->corpo.setPosition(pos);
 			this->corpo.setSize(tam);
 			this->id = 1;
 		}
-		Tenth::~Tenth()
+		Miyu::~Miyu()
 		{
 		}
-		void Tenth::colisao(Entidade* outraEntidade)
+		void Miyu::colisao(Entidade* outraEntidade)
 		{
 			if (outraEntidade->getID() == 2)
 			{
@@ -25,7 +25,7 @@ namespace Jogar
 				this->corpo.setFillColor(sf::Color::White);
 			}
 		}
-		void Tenth::executar()
+		void Miyu::executar()
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) 
 			{

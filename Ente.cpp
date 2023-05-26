@@ -11,9 +11,9 @@ namespace Jogar
 	{
 	}
 
-	void Ente::desenhar()
+	/*void Ente::desenhar()
 	{
-	}
+	}*/
 
 	int Ente::getID()
 	{

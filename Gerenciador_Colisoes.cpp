@@ -18,8 +18,8 @@ namespace Jogar
 
 		const sf::Vector2f Gerenciador_Colisoes::calculaColisao(Entidades::Entidade* ent1, Entidades::Entidade* ent2)
 		{
-			sf::Vector2f pos1 = ent1->getPos();
-			sf::Vector2f pos2 = ent2->getPos();
+			sf::Vector2f pos1 = *ent1->getPos();
+			sf::Vector2f pos2 = *ent2->getPos();
 
 			sf::Vector2f tam1 = ent1->getTam();
 			sf::Vector2f tam2 = ent2->getTam();

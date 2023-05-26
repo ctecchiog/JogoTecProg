@@ -79,16 +79,16 @@ namespace Jogar
 
 	void Jogo::instanciaEntidades()
 	{
-		Entidades::Tenth* tenth = new Entidades::Tenth(sf::Vector2f(200.0f, 200.0f), sf::Vector2f(50.0f, 50.0f));
-		Entidades::Eleventh* eleventh = new Entidades::Eleventh(sf::Vector2f(450.0f, 450.0f), sf::Vector2f(50.0f, 50.0f));
+		Entidades::Miyu* miyu = new Entidades::Miyu(sf::Vector2f(200.0f, 200.0f), sf::Vector2f(50.0f, 50.0f));
+		Entidades::Asahi* asahi = new Entidades::Asahi(sf::Vector2f(450.0f, 450.0f), sf::Vector2f(50.0f, 50.0f));
 		Entidades::Inimigo* inimigo1 = new Entidades::Inimigo(sf::Vector2f(600.0f, 100.0f), sf::Vector2f(30.0f, 30.0f), pJogador1, pJogador2);
 		Entidades::Inimigo* inimigo2 = new Entidades::Inimigo(sf::Vector2f(200.0f, 400.0f), sf::Vector2f(30.0f, 30.0f), pJogador1, pJogador2);
 		Entidades::Obstaculo* obstaculo1 = new Entidades::Obstaculo(sf::Vector2f(200.0f, 300.0f), sf::Vector2f(20.0f, 20.0f));
 		Entidades::Obstaculo* obstaculo2 = new Entidades::Obstaculo(sf::Vector2f(550.0f, 550.0f), sf::Vector2f(20.0f, 20.0f));
 		Entidades::Obstaculo* obstaculo3 = new Entidades::Obstaculo(sf::Vector2f(50.0f, 50.0f), sf::Vector2f(20.0f, 20.0f));
 
-		Entidades::Entidade* p1 = static_cast<Entidades::Entidade*>(tenth);
-		Entidades::Entidade* p2 = static_cast<Entidades::Entidade*>(eleventh);
+		Entidades::Entidade* p1 = static_cast<Entidades::Entidade*>(miyu);
+		Entidades::Entidade* p2 = static_cast<Entidades::Entidade*>(asahi);
 		Entidades::Entidade* p3 = static_cast<Entidades::Entidade*>(inimigo1);
 		Entidades::Entidade* p4 = static_cast<Entidades::Entidade*>(inimigo2);
 		Entidades::Entidade* p5 = static_cast<Entidades::Entidade*>(obstaculo1);
@@ -103,9 +103,9 @@ namespace Jogar
 		listaEntidade.addEntidade(p6);
 		listaEntidade.addEntidade(p7);
 
-		setJogador(tenth);
+		setJogador(miyu);
 		if (pJogador1 != pJogador2)
-			setJogador(eleventh);
+			setJogador(asahi);
 	}
 	/*void Jogo::verificaTeclaPressionada(sf::Keyboard::Key tecla)
 	{

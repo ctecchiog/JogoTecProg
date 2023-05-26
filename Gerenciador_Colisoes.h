@@ -1,8 +1,8 @@
 #pragma once
 #include "stdafx.h"
 #include "ListaEntidade.h"
-#include "Tenth.h"
-#include "Eleventh.h"
+#include "Miyu.h"
+#include "Asahi.h"
 #include "Inimigo.h"
 #include "Obstaculo.h"
 #include <SFML/Graphics.hpp>

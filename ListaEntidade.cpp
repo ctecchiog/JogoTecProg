@@ -38,7 +38,7 @@ namespace Jogar
             {
                 aux = objListaEntidade.operator[](i);
                 aux->executar();
-                window->draw(aux->getCorpo());
+                window->draw(*aux->getCorpo());
             }
         }
     }

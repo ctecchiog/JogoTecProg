@@ -13,7 +13,7 @@ namespace Jogar
 	public:
 		Ente();
 		~Ente();
-		virtual void desenhar();
+		//virtual void desenhar();
 		int getID();
 		virtual void executar() = 0;
 	};

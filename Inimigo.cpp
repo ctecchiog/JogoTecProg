@@ -64,8 +64,8 @@ namespace Jogar
 
 		void Inimigo::executar()
 		{
-			sf::Vector2f posJogador = jogador1->getCorpo().getPosition();
-			sf::Vector2f posInimigo = this->corpo.getPosition();
+			sf::Vector2f posJogador = *jogador1->getPos();
+			sf::Vector2f posInimigo = this->pos;
 
 			if (fabs(posJogador.x - posInimigo.x) <= RAIO_PERSEGUIRX && fabs(posJogador.y - posInimigo.y) <= RAIO_PERSEGUIRY)
 				persegueJogador(posJogador, posInimigo);
@@ -74,8 +74,8 @@ namespace Jogar
 
 			if (jogador1 != jogador2)
 			{
-				sf::Vector2f posJogador2 = jogador2->getCorpo().getPosition();
-				sf::Vector2f posInimigo = this->corpo.getPosition();
+				sf::Vector2f posJogador2 = *jogador2->getPos();
+				sf::Vector2f posInimigo = this->pos;
 				
 				if (fabs(posJogador2.x - posInimigo.x) <= RAIO_PERSEGUIRX && fabs(posJogador2.y - posInimigo.y) <= RAIO_PERSEGUIRY)
 					persegueJogador(posJogador2, posInimigo);

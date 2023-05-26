@@ -4,8 +4,8 @@ namespace Jogar
 {
 	namespace Entidades
 	{
-		Entidade::Entidade(): corpo(sf::RectangleShape(tam)), 
-			pos(sf::Vector2f(10.0f, 10.0f)), tam(sf::Vector2f(10.0f, 10.0f))	
+		Entidade::Entidade(): pos(sf::Vector2f(10.0f, 10.0f)), tam(sf::Vector2f(10.0f, 10.0f)),
+			corpo(tam)
 		{
 		}
 		Entidade::Entidade(const sf::Vector2f pos, const sf::Vector2f tam): Entidade()
@@ -17,14 +17,14 @@ namespace Jogar
 		{
 		}
 
-		const sf::RectangleShape Entidade::getCorpo()
+		const sf::RectangleShape* Entidade::getCorpo()
 		{
-			return corpo;
+			return &corpo;
 		}
 
-		sf::Vector2f Entidade::getPos()
+		sf::Vector2f* Entidade::getPos()
 		{
-			return pos;
+			return &pos;
 		}
 
 		const sf::Vector2f Entidade::getTam()

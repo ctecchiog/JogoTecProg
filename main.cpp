@@ -5,7 +5,7 @@
 using namespace Jogar;
 int main()
 {
-    Jogo jogo;
+    Jogo feverDream;
   
     return 0;
 }
