@@ -4,7 +4,7 @@ namespace Jogar
 {
 	namespace Entidades
 	{
-		Asahi::Asahi()
+		Asahi::Asahi(): Jogador(pos, tam)
 		{
 		}
 		Asahi::Asahi(const sf::Vector2f pos, const sf::Vector2f tam): Asahi()

@@ -3,7 +3,7 @@
 namespace Jogar
 {
 	namespace Entidades {
-		Inimigo::Inimigo():
+		Inimigo::Inimigo(): Personagem(pos, tam),
 			jogador1(jogador1), jogador2(jogador2), moveAleatorio()
 		{
 		}

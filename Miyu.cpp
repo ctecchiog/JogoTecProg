@@ -4,7 +4,7 @@ namespace Jogar
 {
 	namespace Entidades
 	{
-		Miyu::Miyu()
+		Miyu::Miyu(): Jogador(pos, tam)
 		{
 		}
 		Miyu::Miyu(const sf::Vector2f pos, const sf::Vector2f tam): Miyu()

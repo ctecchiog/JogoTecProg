@@ -3,7 +3,7 @@
 namespace Jogar
 {
 	namespace Entidades {
-		Personagem::Personagem() :
+		Personagem::Personagem(): Entidade(pos, tam),
 			vel(sf::Vector2f(0.1f, 0.1f)), relogio(), dt(0.0f), num_vidas(5)
 		{
 		}

@@ -4,7 +4,7 @@ namespace Jogar
 {
 	namespace Entidades 
 	{
-		Obstaculo::Obstaculo()
+		Obstaculo::Obstaculo(): Entidade(pos, tam)
 		{
 		}
 		Obstaculo::Obstaculo(const sf::Vector2f pos, const sf::Vector2f tam): Obstaculo()

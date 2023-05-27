@@ -19,8 +19,4 @@ namespace Jogar
 	{
 		return id;
 	}
-
-	void Ente::executar()
-	{
-	}
 }

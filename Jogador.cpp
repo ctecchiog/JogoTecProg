@@ -3,7 +3,7 @@
 namespace Jogar
 {
 	namespace Entidades {
-		Jogador::Jogador()
+		Jogador::Jogador(): Personagem(pos, tam)
 		{
 		}
 		Jogador::Jogador(const sf::Vector2f pos, const sf::Vector2f tam): Jogador()

@@ -5,8 +5,9 @@ namespace Jogar
 	namespace Entidades
 	{
 		// Doglas acha que a segunda construtora nao ta sendo chamada, ver isso
-		Entidade::Entidade(): pos(sf::Vector2f(10.0f, 10.0f)), tam(sf::Vector2f(10.0f, 10.0f)),
-			corpo(tam)
+		Entidade::Entidade(): Ente(), 
+			pos(sf::Vector2f(10.0f, 10.0f)), tam(sf::Vector2f(10.0f, 10.0f)), 
+			corpo(sf::RectangleShape(tam))
 		{
 		}
 		Entidade::Entidade(const sf::Vector2f pos, const sf::Vector2f tam): Entidade()
@@ -34,9 +35,6 @@ namespace Jogar
 		}
 
 		void Entidade::colisao(Entidade* outraEntidade)
-		{
-		}
-		void Entidade::executar()
 		{
 		}
 	}
