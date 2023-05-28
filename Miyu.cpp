@@ -27,22 +27,7 @@ namespace Jogar
 		}
 		void Miyu::executar()
 		{
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) 
-			{
-				corpo.move(vel.x, 0.0f);
-			}
-			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-			{
-				corpo.move(-vel.x, 0.0f);
-			}
-			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-			{
-				corpo.move(0.0f, vel.y);
-			}
-			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-			{
-				corpo.move(0.0f, -vel.y);
-			}
+			atualizaPosicao();
 		}
 	}
 }

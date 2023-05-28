@@ -163,11 +163,14 @@
     <ClCompile Include="ListaEntidade.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Obstaculo.cpp" />
+    <ClCompile Include="SilentSkies.cpp" />
     <ClCompile Include="Personagem.cpp" />
     <ClCompile Include="Miyu.cpp" />
+    <ClCompile Include="TheCalling.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Asahi.h" />
+    <ClInclude Include="SilentSkies.h" />
     <ClInclude Include="Fase.h" />
     <ClInclude Include="Elemento.h" />
     <ClInclude Include="Ente.h" />
@@ -183,6 +186,7 @@
     <ClInclude Include="Personagem.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Miyu.h" />
+    <ClInclude Include="TheCalling.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,14 +21,6 @@ namespace Jogar
 			corpo.move(0.0f, 0.0f);
 		}
 
-		void Personagem::colisao(Entidade* outraEntidade)
-		{
-		}
-
-		void Personagem::executar()
-		{
-		}
-
 		int Personagem::getNumVidas()
 		{
 			return num_vidas;

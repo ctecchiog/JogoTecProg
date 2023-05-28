@@ -1,5 +1,6 @@
 #pragma once
 #include "stdafx.h"
+#include "Gerenciador_Grafico.h"
 #include "Gerenciador_Colisoes.h"
 #include <SFML/Graphics.hpp>
 
@@ -16,10 +17,6 @@ namespace Jogar
 	public:
 		Jogo();
 		~Jogo();
-		void executar();
-		void setJogador(Entidades::Jogador* pJogador);
-		void instanciaEntidades();
-		//void verificaTeclaPressionada(sf::Keyboard::Key tecla);
-		//void verificaTeclaSolta(sf::Keyboard::Key tecla);
+		void executar();		
 	};
 }

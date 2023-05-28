@@ -10,11 +10,12 @@ namespace Jogar
 		class Jogador : public Personagem
 		{
 		protected:
-			//float ds;
+			float ds;
 		public:
 			Jogador();
 			Jogador(const sf::Vector2f pos, const sf::Vector2f tam);
 			~Jogador();
+			void atualizaPosicao();
 			virtual void colisao(Entidade* outraEntidade) = 0;
 			virtual void executar() = 0;
 		};

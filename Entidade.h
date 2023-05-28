@@ -20,7 +20,7 @@ namespace Jogar
 			const sf::RectangleShape getCorpo();
 			sf::Vector2f getPos();
 			const sf::Vector2f getTam();
-			virtual void colisao(Entidade* outraEntidade);
+			virtual void colisao(Entidade* outraEntidade) = 0;
 			virtual void executar() = 0;
 		};
 	}

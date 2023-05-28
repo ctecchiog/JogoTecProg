@@ -50,10 +50,10 @@ namespace Jogar
 				window->clear();
 		}
 
-		/*void Gerenciador_Grafico::desenhaElemento(sf::RectangleShape corpo)
+		void Gerenciador_Grafico::desenhaElemento(sf::RectangleShape corpo)
 		{
 			window->draw(corpo);
-		}*/
+		}
 
 		void Gerenciador_Grafico::mostraElementos()
 		{
