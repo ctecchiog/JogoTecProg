@@ -5,7 +5,7 @@ namespace Jogar
 {
 	Jogo::Jogo(): 
 		pGrafico(pGrafico->getGerenciadorGrafico()), pColisoes(pColisoes),
-		pJogador1(pJogador1), pJogador2(pJogador2)
+		pJogador1(pJogador1), pJogador2(pJogador2), listaEntidade(listaEntidade), pFase(pFase)
 	{
 		
 	}
@@ -62,7 +62,8 @@ namespace Jogar
 					pGrafico->fechaJanela();
 			}
 			pGrafico->limpaJanela();
-			listaEntidade.executar(pGrafico->getWindow());
+			listaEntidade->executar(pGrafico->getWindow());
+			pFase->executar();
 			pGrafico->mostraElementos();
 		}
 	}

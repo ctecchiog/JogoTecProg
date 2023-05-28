@@ -45,8 +45,6 @@ namespace Jogar
 				cout << "Erro na criação de Gerenciador de Colisão" << endl;
 				exit(1);
 			}
-
-			atualizarEntidades();
 		}
 
 		Fase::~Fase()
@@ -71,6 +69,7 @@ namespace Jogar
 
 		void Fase::executar()
 		{
+			atualizarEntidades();
 			listaEntidade.executar(pGrafico->getWindow());
 		}
 	}
