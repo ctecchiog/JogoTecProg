@@ -39,8 +39,6 @@ namespace Jogar
 			//executar();
 		}
 
-		
-
 		Fase::~Fase()
 		{
 			if (pColisoes) {
@@ -64,10 +62,10 @@ namespace Jogar
 
 		}
 
-		void Fase::setJogador(Entidades::Jogador* pJogador)
+		/*void Fase::setJogador(Entidades::Jogador* pJogador)
 		{
 			
-		}
+		}*/
 
 		void Fase::executar()
 		{

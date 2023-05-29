@@ -11,6 +11,7 @@ namespace Jogar
 	{
 		class Fase : public Ente
 		{
+		//protected:
 		private:
 			Lista::ListaEntidade listaEntidade;
 			Gerenciadores::Gerenciador_Colisoes* pColisoes;
@@ -21,7 +22,7 @@ namespace Jogar
 			Fase();
 			~Fase();
 			void addJogLista(Entidades::Jogador* p1, Entidades::Jogador* p2);
-			void setJogador(Entidades::Jogador* pJogador);
+			//void setJogador(Entidades::Jogador* pJogador);
 			//virtual void criarFundo() = 0;
 			//virtual void desenhar() = 0;
 			void executar();
