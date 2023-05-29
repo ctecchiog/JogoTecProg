@@ -4,10 +4,10 @@ namespace Jogar
 {
 	namespace Entidades {
 		Inimigo::Inimigo(): Personagem(pos, tam),
-			jogador1(jogador1), jogador2(jogador2), moveAleatorio()
+			moveAleatorio()
 		{
 		}
-		Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam, Jogador* jogador1, Jogador* jogador2): Inimigo()
+		Inimigo::Inimigo(const sf::Vector2f pos, const sf::Vector2f tam): Inimigo()
 		{
 			corpo.setPosition(pos);
 			corpo.setSize(tam);
@@ -64,7 +64,7 @@ namespace Jogar
 
 		void Inimigo::executar()
 		{
-			sf::Vector2f posJogador = jogador1->getPos();
+			/*//sf::Vector2f posJogador = jogador1->getPos();
 			sf::Vector2f posInimigo = pos;
 
 			if (fabs(posJogador.x - posInimigo.x) <= RAIO_PERSEGUIRX && fabs(posJogador.y - posInimigo.y) <= RAIO_PERSEGUIRY)
@@ -81,7 +81,7 @@ namespace Jogar
 					persegueJogador(posJogador2, posInimigo);
 				else
 					movimentoAleatorio();
-			}
+			} */
 		}
 	}
 }

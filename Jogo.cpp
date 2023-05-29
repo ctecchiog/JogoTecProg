@@ -5,9 +5,11 @@ namespace Jogar
 {
 	Jogo::Jogo(): 
 		pGrafico(pGrafico->getGerenciadorGrafico()), pColisoes(pColisoes),
-		pJogador1(pJogador1), pJogador2(pJogador2), listaEntidade(listaEntidade), pFase(pFase)
+		pJogador1(new Entidades::Asahi), pJogador2(new Entidades::Miyu), 
+		pFase(new Fases::Fase())
 	{
-		
+		pFase->addJogLista(pJogador1, pJogador2);
+
 	}
 
 	Jogo::~Jogo()
@@ -62,7 +64,8 @@ namespace Jogar
 					pGrafico->fechaJanela();
 			}
 			pGrafico->limpaJanela();
-			listaEntidade->executar(pGrafico->getWindow());
+			//
+			//listaEntidade->executar(pGrafico->getWindow());
 			pFase->executar();
 			pGrafico->mostraElementos();
 		}
